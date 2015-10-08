@@ -1,4 +1,4 @@
-# Welcome
+# Welcome, stranger!
 
 This is where it all starts, your first path page. This page is your chance to make a great first impression. So let your personality come through and make sure to get your learners excited about embarking on your path.
 
