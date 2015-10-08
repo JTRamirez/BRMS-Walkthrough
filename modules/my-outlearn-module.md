@@ -36,7 +36,6 @@ If you want to enrich your content with more features, this sample module has a 
 You can include images using Markdown syntax.
 
 ![sea](https://raw.githubusercontent.com/outlearn-content/outlearn-modules/master/assets/sea.jpg)
-<!-- @asset, "contentType": "outlearn/video", "provider": "youtube", "url": "https://www.youtube.com/embed/CmjeCchGRQo" -->
 
 You can embed hosted videos in your paths using Outlearn @asset syntax. Here is a Vimeo video:
 
@@ -45,6 +44,31 @@ You can embed hosted videos in your paths using Outlearn @asset syntax. Here is 
 And here is another one form YouTube:
 
 <!-- @asset, "contentType": "outlearn/video", "provider": "youtube", "url": "https://www.youtube.com/embed/CmjeCchGRQo" -->
+
+<!-- @section -->
+
+## The *Cool* Section
+
+Check out this section. Pretty great, right?
+
+How about this video? I have no idea what it is, but look!
+
+<!-- @asset, "contentType": "outlearn/video", "provider": "youtube", "url": "https://www.youtube.com/embed/CmjeCchGRQo" -->
+
+<!-- @task, "text" : "Watch the video. Just watch it. Watch. Watch! Have you watched yet?" -->
+
+Time for a multiple choice question!
+
+<!-- @multipleChoice -->
+
+Which of the following statements is true?
+
+- [ ] This statement is false.
+- [ ] The first statement is true, but this statement is false.
+- [X] The second statement is false, and the fourth statement is false.
+- [ ] All the statements are false.
+
+<!-- @end -->
 
 <!-- @section -->
 
