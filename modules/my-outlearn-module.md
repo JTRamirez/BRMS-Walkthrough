@@ -36,7 +36,7 @@ If you want to enrich your content with more features, this sample module has a 
 You can include images using Markdown syntax.
 
 ![sea](https://raw.githubusercontent.com/outlearn-content/outlearn-modules/master/assets/sea.jpg)
-
+<!-- @asset, "contentType": "outlearn/video", "provider": "youtube", "url": "https://www.youtube.com/embed/CmjeCchGRQo" -->
 
 You can embed hosted videos in your paths using Outlearn @asset syntax. Here is a Vimeo video:
 
