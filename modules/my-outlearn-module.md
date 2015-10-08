@@ -1,6 +1,6 @@
 <!--
 {
-"name": "my-outlearn-module",
+"name": "awesome-first-module",
 "version" : "0.1",
 "title" : "My Outlearn Module",
 "description" : "This module will grow to be the best module ever",
