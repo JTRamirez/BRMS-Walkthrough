@@ -31,7 +31,7 @@ Most of these changes have a developer navigate to $EAP_HOME/standalone/deployme
 
 Although their division into folders is explained in part by the aforementioned documentation, it is also fairly inconsistent – uncovering the location of CSS files that dictate actual visible styles required using the developer navigator in Firefox to uncover the source. Undoubtedly, Red Hat didn’t create BRMS with UI/UX changes in mind. That said, it isn’t very difficult, and an understanding of the components that make up KIE and BRMS (Drools, Guvnor, etc) help to explain the organization. And, of course, making changes to the CSS was as simple as editing a document.
 
-
+![css](https://cloud.githubusercontent.com/assets/15032492/10402478/a2b07dbe-6e93-11e5-96da-8d03bbf92865.PNG)
 Particularly when editing styling that’s inline, using a web inspector is necessary to determine where styles for certain components are dictated.
 
 Most elements – images, buttons, text, fonts, links, lists, tables, backgrounds, and menus – have exposed CSS that can be edited, and the great majority of the visible interface is stored in this way, rather than generated at runtime. The primary CSS files (those that seem to be responsible for most of this user-visible styling) include bootstrap.min.css; forms.css; HumanTasks.css; ProcessList.css; and timebox.css. But there are also many styles which exist inline within various HTML documents, utilized by the Java webapp located in the org.kie.workbench.KIEWebapp directory.
