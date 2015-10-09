@@ -17,7 +17,7 @@
   ],
 
   "modules" : [
-    {"olm" : "./modules/part-one-whats-a-rule-engine-anyway.md"}
+    {"olm" : "./modules/part-one-whats-a-rule-engine-anyway.md"},
     {"olm" : "./modules/part-two-installing-brms.md"}
   ],
 
