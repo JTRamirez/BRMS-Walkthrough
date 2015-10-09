@@ -20,6 +20,8 @@ This section is meant to be a catch-all for information and content that isn't m
 
 <!-- @section -->
 
+# Modifying the UI/UX of the BRMS web interface
+
 Although limited to "aesthetic" rather than structural changes, the interface presented by BRMS is modifiable to a significant extent by virtue of the fact that it relies on bootstrap.css, and makes its HTML and CSS readily available for access and editing in the file structure. 
 
 In fact, Red Hat actually provides some documentation regarding [how to customize particular user-facing interface elements of BPM and BRMS](https://access.redhat.com/documentation/en-US/Red_Hat_JBoss_BRMS/6.1
