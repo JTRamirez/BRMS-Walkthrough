@@ -1,6 +1,6 @@
 <!--
 {
-"name": "part-five-brms-for-application-developers.md",
+"name": "part-five-brms-for-application-developers",
 "version" : "0.1",
 "title" : "Part V: BRMS for application developers",
 "description" : "A summary of Red Hat's APIs, and explainers for how an application can integrate with BRMS.",
