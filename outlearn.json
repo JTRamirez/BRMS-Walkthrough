@@ -10,6 +10,7 @@
       "pages" : [
         {"page" : "./pages/introduction.md"},
         {"module" : "part-one-whats-a-rule-engine-anyway"},
+        {"module" : "part-two-installing-brms"},
         {"page" : "./pages/conclusion.md"}
       ]
     }
@@ -17,6 +18,7 @@
 
   "modules" : [
     {"olm" : "./modules/part-one-whats-a-rule-engine-anyway.md"}
+    {"olm" : "./modules/part-two-installing-brms.md"}
   ],
 
   "assets" : [
