@@ -1,9 +1,9 @@
 <!--
 {
-"name": "part-two-installing-brms",
+"name": "part-six-putting-it-all-together",
 "version" : "0.1",
-"title" : "Part II: Installing BRMS",
-"description" : "How to install Red Hat's BRMS solution.",
+"title" : "Part VI: Putting it all together",
+"description" : "Wrapping up this path with a summary of the most important concepts, and how they interrelate.",
 "homepage" : "https://github.com/outlearn-content/outlearn-modules",
 "freshnessDate" : 2015-07-08,
 "license" : "CC BY 4.0"
