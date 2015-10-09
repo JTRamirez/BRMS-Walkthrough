@@ -14,43 +14,76 @@
 
 # What's covered in this section
 
-* The definition of a Rules Engine
-* The benefits and challenges of a Rules Engine
-* What this Outlearn path will cover
+* Intoduction to rules and decision tables
+* Business rules
+* Business rules syntax
+* Decision tables
+* Decision tables syntax
 
 
 <!-- @section -->
 
-### The definition of a Rules Engine
+### Intoduction to rules and decision tables
 
-Fundamentally, a rules engine is:
+The difference (Statements versus inter-related tableture. How they're authored. How they're stored)
 
-> A system that is *purpose-built to perform logic*, usually in the form of "When [condition], then [action]".
-
-Rather than encompassing a bunch of application components, rules engines are narrowly focused on the decision-making processes that exist within most apps. Thus, they are meant work alongside applications by centralizing the storage of rules and logic, and then processing data against those rules as needed.
 
 <!-- @section -->
 
-### The benefits and challenges of a Rules Engine
+### Business rules
 
-It may seem unusual at first to effectively outsource intellignece from the application that's using the logic anyway, but abstracting logic from application code provides a variety of benefits:
+Composed in files, rules are logical statements. Can be interdependant. Algorithms process data against these rules and yield data back to applications (PHREAK is covered in the Advanced topics section)
 
-* For logic that needs to be changed or updated often, it is usually time-consuming and expensive to perfom such updates when the logic is expressed in application code. Rules, comparatively, are easier to update, and are faster to deploy.
-* Logic expressed in programming languages like Java tend to be difficult to understand, especially for those who don't code frequently. Business rules, however, have a more legible syntax that is clearer to experienced programmers and BSA's alike.
-* Storing logic for multiple applications in a centralized repository makes it easier to access and edit.
-
-Of course, rules engines have costs associated with them as well, including:
-
-* Additional cost.
-* Increased complexity, both from a technology environment perspective, and an app development perspective.
-* Risk of slower applications, particularly when developers don't leverage the rules engine properly, and/or don't adapt the right mindset when composing rules (rule creation is very different from application development).
-
-Ultimately, however, rules engines can be very beneficial for environments that change rules often, desire faster rules deployment, want more understandable/accessible logic, or manage many rules across a variety of systems.
 
 <!-- @section -->
 
-### What this Outlearn path will cover
+### Business rules syntax
 
-This path is intended to provide a high level summary of the process for installing and using Red Hat's BRMS (Business Rules Management System) platform, with some particulars that should be helpful for developers and rules authors alike.
+2.	Create rules and decision tables that utilize the variables presented by the app, via the BRMS web application interface. Rules are programmatic “When [condition], then [action]”, with their own straightforward syntax. The punctuation is forgiving, and many keywords are available in order to achieve more complex behavior, or set rule precedence). Furthermore, this syntax can even be designed via Domain Specific Languages, or DSLs (which the 6.0 Development Guide documents thoroughly in Section 7.5). An example is below:
+rule “Push Message” (The name of the rule)
+	when 
+		m : Message( status == Message.HELLO, myMessage : message )
+		(A fact or condition that, when it evaluates as true…)
+	then
+		System.out.println( myMessage );
+		m.setMessage( “Goodbye!” );
+		m.setStatus( Message.GOODBYE );
+		update( m );
+		(…executes and sends along the “result”)
+End
+
+rule “Follow Message”
+		when
+			Message( status == Message.GOODBYE, myMessage : message )
+		then
+			System.out.println(“My name: “ + myMessage);
+end
+
+As an aside, rules themselves are stored in rule files, which are structured as such (note that each of these elements are optional):
+
+package package-name
+imports
+globals (Generally provide static information)
+functions (Operations rules can perform when fired)
+queries (Pulling date for use in rule processing)
+rules (The rules themselves)
+
+
+
+<!-- @section -->
+
+### Decision tables
+
+Of course, rules and rule files aren’t the only way to create and store logic. Decision tables are an alternate method, which Red Hat describes succinctly as such:
+
+Decision tables are a "precise yet compact" (ref. Wikipedia) way of representing conditional logic, and they are well suited to business level rules. Red Hat JBOSS BRMS supports managing rules in a spreadsheet format. Supported formats are Excel (XLS) and CSV; accordingly, a variety of spreadsheet programs (such as Microsoft Excel) can be utilized… Consider decision tables as a course of action if rules exist that can be expressed as rule templates and data: each row of a decision table provides data that is combined with a template to generate a rule. Decision tables are not recommended for rules that do not follow a set of templates or where there are a small number of rules.
+
+In layman’s terms, decision tables are great when rules or logic are highly related and follow the same structure, and especially when they cover ranges (“When the temperature is under 60, then return “Bring a coat”; When the temperature is over 80, then return “Wear a shirt”; etc.). Same as with rules, these are created via the BRMS web application interface.
+
+<!-- @section -->
+
+### Decision tables syntax
+
+These, too, can be edited directly in BRMS, and can alternately be imported and/or edited as Excel or standard CSV spreadsheets:
 
 <!-- @end -->
