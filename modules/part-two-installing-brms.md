@@ -14,26 +14,23 @@
 
 # What's covered in this section
 
-* The definition of a Rules Engine
-* The benefits and challenges of a Rules Engine
-* What this Outlearn path will cover
+* Installing Red Hat Linux Enterprise
+* Installing Apache's Maven, and Oracle's Java
+* Installing Red Hat's EAP and BRMS
+* Installing related software and tools
 
 
 <!-- @section -->
 
-### The definition of a Rules Engine
+### Installing Red Hat Linux Enterprise
 
-Fundamentally, a rules engine is:
-
-> A system that is *purpose-built to perform logic*, usually in the form of "When [condition], then [action]".
-
-Rather than encompassing a bunch of application components, rules engines are narrowly focused on the decision-making processes that exist within most apps. Thus, they are meant work alongside applications by centralizing the storage of rules and logic, and then processing data against those rules as needed.
+BRMS should be installed on the most recent non-beta version of Red Hat Enterprise Linux (RHEL).
 
 <!-- @section -->
 
-### The benefits and challenges of a Rules Engine
+### Installing Apache's Maven, and Oracle's Java
 
-It may seem unusual at first to effectively outsource intellignece from the application that's using the logic anyway, but abstracting logic from application code provides a variety of benefits:
+ with up-to-date versions of Java and Maven installed beforehand. 
 
 * For logic that needs to be changed or updated often, it is usually time-consuming and expensive to perfom such updates when the logic is expressed in application code. Rules, comparatively, are easier to update, and are faster to deploy.
 * Logic expressed in programming languages like Java tend to be difficult to understand, especially for those who don't code frequently. Business rules, however, have a more legible syntax that is clearer to experienced programmers and BSA's alike.
@@ -49,8 +46,14 @@ Ultimately, however, rules engines can be very beneficial for environments that 
 
 <!-- @section -->
 
-### What this Outlearn path will cover
+### Installing Red Hat's EAP and BRMS
 
-This path is intended to provide a high level summary of the process for installing and using Red Hat's BRMS (Business Rules Management System) platform, with some particulars that should be helpful for developers and rules authors alike.
+BRMS additionally requires Red Hat’s Enterprise Application Platform (EAP), though this can be packaged together with BRMS as a unified installer.
+
+<!-- @section -->
+
+### Installing related software and tools
+
+Once in place, importing and Java development of any kind is handled by the JBoss BRMS Developer Studio (which is a version of Eclipse with EAP and BRMS-related tools installed), though rules authoring itself is intended to be done via BRMS. Red Hat provides an Eclipse plug-in that integrates some EAP and BRMS development tools into the Java IDE, and packages this into a unified solution as their EAP Development Platform (for RHEL). Much of this is documented in the BRMS 6.1 Administration and Configuration guide (A&C) mentioned earlier.
 
 <!-- @end -->
