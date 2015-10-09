@@ -4,8 +4,10 @@ This path was compiled based on the information available on a wide variety of s
 
 The below links encompass documentation, presentations, videos, and related media that should prove to be helpful in learning more about BRMS, and understanding the process in which it is installed and deployed. This is particularly true for rule authoring (understanding syntax and scope) and app development (APIs, methods, etc.), and I’ve thus organized the links toward these functions.
 
-## Resources for installation:  
+---
 
+## Resources for installation:  
+---
 ### Demos:
 
 [Part One of Red Hat’s BRMS Cool Store demo](http://www.jboss.org/video/vimeo/65222228/) walks through a basic installation of BRMS on top of EAP & RHEL. 
