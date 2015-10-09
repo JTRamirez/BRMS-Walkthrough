@@ -18,10 +18,9 @@ Section One of Red Hat’s online workshop provides an online slide deck, as wel
 
 ### Demos:
 
-The example projects from Red Hat’s JBoss BRMS Starter Kit – notably, the “Weight Watchers Realtime Decision Server” and “Loan Realtime Decision Server” – are perhaps the most nformative with respect to illustrating what app integration looks like, and how (and what kinds of) logic should be constructed within BRMS. For each of the example projects, functional dummy apps and rules are already configured, and their logic ssed via BRMS). It’s highly recommended to go through these with a fresh installation of RHEL on a virtual machine:
-•	http://www.schabell.org/p/jboss-brms-starter-kit.html
-Ruling with Drools RE. An excellent walkthrough (with full example) of implementing a rules engine in a Java app. The example uses a local rules repository, rather than a remote/centralized one, but the guide is informative nevertheless:
-•	https://pkghosh.wordpress.com/2010/11/20/ruling-with-drools-rule-engine/ 
+The example projects from Red Hat’s JBoss BRMS Starter Kit – notably, the “Weight Watchers Realtime Decision Server” and “Loan Realtime Decision Server” – are perhaps the most nformative with respect to illustrating what app integration looks like, and how (and what kinds of) logic should be constructed within BRMS. For each of the example projects, functional dummy apps and rules are already configured, and their logic authored, via BRMS. Note that it is highly recommended to use these with a fresh installation of RHEL on a virtual machine, since they necessitate many installations: http://www.schabell.org/p/jboss-brms-starter-kit.html
+
+Ruling with Drools RE. An excellent walkthrough (with full example) of implementing a rules engine in a Java app. The example uses a local rules repository, rather than a remote/centralized one, but the guide is informative nevertheless https://pkghosh.wordpress.com/2010/11/20/ruling-with-drools-rule-engine/ 
 
 ## Resources for rule creation:
 
