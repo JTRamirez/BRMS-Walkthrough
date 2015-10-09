@@ -1,9 +1,9 @@
 <!--
 {
-"name": "part-two-installing-brms",
+"name": "part-three-exploring-the-brms-web-interface",
 "version" : "0.1",
-"title" : "Part II: Installing BRMS",
-"description" : "How to install Red Hat's BRMS solution.",
+"title" : "Part III: Exploring the BRMS web interface",
+"description" : "Navigating the pages of Red Hat's online BRMS platform.",
 "homepage" : "https://github.com/outlearn-content/outlearn-modules",
 "freshnessDate" : 2015-07-08,
 "license" : "CC BY 4.0"
