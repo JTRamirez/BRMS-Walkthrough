@@ -6,7 +6,7 @@ The below links encompass documentation, presentations, videos, and related medi
 
 ---
 
-## Resources for installation:  
+## Resources for installation
 ---
 ### Demos:
 
@@ -16,8 +16,8 @@ The below links encompass documentation, presentations, videos, and related medi
 
 [Section One of Red Hat’s online workshop](http://www.schabell.org/2014/03/redhat-jboss-brms-online-workshop-coolstore-intro-lab1-2.html) provides an online slide deck, as well as instructions for installing BRMS. 
 
-## Resources for development:  
-
+## Resources for development
+---
 ### Demos:
 
 [The example projects from Red Hat’s JBoss BRMS Starter Kit](http://www.schabell.org/p/jboss-brms-starter-kit.html) – most notably, the “Weight Watchers Realtime Decision Server” and the “Loan Realtime Decision Server” – are perhaps the most informative with respect to illustrating what app integration looks like, and how (and what kinds of) logic should be constructed within BRMS. For each of the example projects, functional dummy apps and rules are already configured, and their logic authored, via BRMS. Note that it is highly recommended to use these with a fresh installation of RHEL on a virtual machine, since they necessitate many installations.
@@ -26,8 +26,8 @@ The below links encompass documentation, presentations, videos, and related medi
 
 [Ruling with Drools RE](https://pkghosh.wordpress.com/2010/11/20/ruling-with-drools-rule-engine/) is an excellent walkthrough, with a full example of implementing a rules engine in a Java app. The example itself uses a local Drools repository, rather than a remote BRMS one, but the guide is informative nevertheless. 
 
-## Resources for rule creation:  
-
+## Resources for rule creation
+---
 ### Demos:
 
 Parts [Two](http://www.jboss.org/video/vimeo/65224122/) & [Three](http://www.jboss.org/video/vimeo/65226780/) of Red Hat’s BRMS Cool Store demos illustrate rule creation, guided decision tables, and the basics of navigating the BRMS web interface.
@@ -36,8 +36,8 @@ Parts [Two](http://www.jboss.org/video/vimeo/65224122/) & [Three](http://www.jbo
 
 [Sections 2-10 of Red Hat’s online workshop](http://www.schabell.org/2014/03/redhat-jboss-brms-online-workshop-coolstore-intro-lab1-2.html) offer a walkthrough of BRMS installation, rule authoring, creating tables, and running through test scenarios via the aforementioned Cool Store demo.
 
-## Additional content:  
-
+## Additional content
+---
 ### Demos:
 
 Red Hat’s [completed Cool Store Demo](https://github.com/jbossdemocentral/brms-coolstore-demo/tree/v2.0) is available as a git repo, with instructions for installation. Ensure that Java and Maven are installed beforehand, ahowever, nd include the Red Hat software when installing as instructed by the included documentation.
