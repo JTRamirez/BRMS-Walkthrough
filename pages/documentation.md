@@ -4,7 +4,8 @@ This path was compiled based on the information available on a wide variety of s
 
 The below links encompass documentation, presentations, videos, and related media that should prove to be helpful in learning more about BRMS, and understanding the process in which it is installed and deployed. This is particularly true for rule authoring (understanding syntax and scope) and app development (APIs, methods, etc.), and I’ve thus organized the links toward these functions.
 
----
+
+
 
 ## Resources for installation
 ---
@@ -16,6 +17,8 @@ The below links encompass documentation, presentations, videos, and related medi
 
 [Section One of Red Hat’s online workshop](http://www.schabell.org/2014/03/redhat-jboss-brms-online-workshop-coolstore-intro-lab1-2.html) provides an online slide deck, as well as instructions for installing BRMS. 
 
+
+
 ## Resources for development
 ---
 ### Demos:
@@ -26,6 +29,8 @@ The below links encompass documentation, presentations, videos, and related medi
 
 [Ruling with Drools RE](https://pkghosh.wordpress.com/2010/11/20/ruling-with-drools-rule-engine/) is an excellent walkthrough, with a full example of implementing a rules engine in a Java app. The example itself uses a local Drools repository, rather than a remote BRMS one, but the guide is informative nevertheless. 
 
+
+
 ## Resources for rule creation
 ---
 ### Demos:
@@ -35,6 +40,8 @@ Parts [Two](http://www.jboss.org/video/vimeo/65224122/) & [Three](http://www.jbo
 ### Workshops:
 
 [Sections 2-10 of Red Hat’s online workshop](http://www.schabell.org/2014/03/redhat-jboss-brms-online-workshop-coolstore-intro-lab1-2.html) offer a walkthrough of BRMS installation, rule authoring, creating tables, and running through test scenarios via the aforementioned Cool Store demo.
+
+
 
 ## Additional content
 ---
