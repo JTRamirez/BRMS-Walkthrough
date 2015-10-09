@@ -3,20 +3,20 @@
 
   "paths" : [
     {
-      "name" : "my-outlearn-path",
-      "title" : "My First Outlearn Path",
-      "description" : "Fastest Way to Publish a Path",
+      "name" : "BRMS-walkthrough",
+      "title" : "BRMS Walkthrough",
+      "description" : "An analysis of Red Hat's BRMS solution, from installation to development to rule authoring.",
       "privacy" : "public",
       "pages" : [
-        {"page" : "./pages/welcome.md"},
-        {"module" : "awesome-first-module"},
-        {"page" : "./pages/closing.md"}
+        {"page" : "./pages/introduction.md"},
+        {"module" : "part-one-whats-a-rule-engine-anyway"},
+        {"page" : "./pages/conclusion.md"}
       ]
     }
   ],
 
   "modules" : [
-    {"olm" : "./modules/awesome-first-module.md"}
+    {"olm" : "./modules/part-one-whats-a-rule-engine-anywaye.md"}
   ],
 
   "assets" : [
