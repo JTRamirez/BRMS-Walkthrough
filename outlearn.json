@@ -16,7 +16,8 @@
         {"module" : "part-five-brms-for-application-developers"},
         {"module" : "part-six-putting-it-all-together"},
         {"module" : "part-seven-advanced-topics"},
-        {"page" : "./pages/conclusion.md"}
+        {"page" : "./pages/conclusion.md"},
+        {"page" : "./pages/documentation.md"}
       ]
     }
   ],
