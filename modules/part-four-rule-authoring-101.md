@@ -1,9 +1,9 @@
 <!--
 {
-"name": "part-two-installing-brms",
+"name": "part-four-rule-authoring-101",
 "version" : "0.1",
-"title" : "Part II: Installing BRMS",
-"description" : "How to install Red Hat's BRMS solution.",
+"title" : "Part IV: Rule authoring 101",
+"description" : "An introduction to creating business rules, decision tables, and related logical constructs.",
 "homepage" : "https://github.com/outlearn-content/outlearn-modules",
 "freshnessDate" : 2015-07-08,
 "license" : "CC BY 4.0"
