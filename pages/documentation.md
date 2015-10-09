@@ -4,8 +4,7 @@ This path was compiled based on the information available on a wide variety of s
 
 The below links encompass documentation, presentations, videos, and related media that should prove to be helpful in learning more about BRMS, and understanding the process in which it is installed and deployed. This is particularly true for rule authoring (understanding syntax and scope) and app development (APIs, methods, etc.), and I’ve thus organized the links toward these functions.
 
-## Resources for installation:
-
+## Resources for installation:  
 
 ### Demos:
 
@@ -15,8 +14,7 @@ The below links encompass documentation, presentations, videos, and related medi
 
 [Section One of Red Hat’s online workshop](http://www.schabell.org/2014/03/redhat-jboss-brms-online-workshop-coolstore-intro-lab1-2.html) provides an online slide deck, as well as instructions for installing BRMS. 
 
-## Resources for development:
-
+## Resources for development:  
 
 ### Demos:
 
@@ -26,8 +24,7 @@ The below links encompass documentation, presentations, videos, and related medi
 
 [Ruling with Drools RE](https://pkghosh.wordpress.com/2010/11/20/ruling-with-drools-rule-engine/) is an excellent walkthrough, with a full example of implementing a rules engine in a Java app. The example itself uses a local Drools repository, rather than a remote BRMS one, but the guide is informative nevertheless. 
 
-## Resources for rule creation:
-
+## Resources for rule creation:  
 
 ### Demos:
 
@@ -37,8 +34,7 @@ Parts [Two](http://www.jboss.org/video/vimeo/65224122/) & [Three](http://www.jbo
 
 [Sections 2-10 of Red Hat’s online workshop](http://www.schabell.org/2014/03/redhat-jboss-brms-online-workshop-coolstore-intro-lab1-2.html) offer a walkthrough of BRMS installation, rule authoring, creating tables, and running through test scenarios via the aforementioned Cool Store demo.
 
-## Additional content:
-
+## Additional content:  
 
 ### Demos:
 
@@ -48,8 +44,8 @@ Red Hat’s [completed Cool Store Demo](https://github.com/jbossdemocentral/brms
 
 Finally, the documentation for JBoss Drools is much more complete, and resources for Drools much more prevalent, than the equivalent online resources for Red Hat’s BRMS solution. However, since BRMS is essentially a repackaged version of Drools (along other tools), much of the documentation for the latter applies to the former. This is particularly true for rule authoring, syntax, API information, and development guidance. Across any and all of these, following resources should be of use.
 
-[Drools 6.3.0 final documentation](http://docs.jboss.org/drools/release/6.3.0.Final/drools-docs/html_single/index.html) (always look for up-to-date documentation on the drools.org website).
+* [Drools 6.3.0 final documentation](http://docs.jboss.org/drools/release/6.3.0.Final/drools-docs/html_single/index.html) (always look for up-to-date documentation on the drools.org website).
 
-[Drools helloworld-brms example project](http://www.jboss.org/quickstarts/brms/helloworld-brms/)'
+* [Drools helloworld-brms example project](http://www.jboss.org/quickstarts/brms/helloworld-brms/)
 
-[Drools 6.0 Red Hat Summit presentation deck](http://www.slideshare.net/MarkProctor/drools-60-red-hat-summit-34589970#) includes example projects & git repos, video tutorials, as well as in-depth discussion of rule authoring, decision tables & scorecards.
+* [Drools 6.0 Red Hat Summit presentation deck](http://www.slideshare.net/MarkProctor/drools-60-red-hat-summit-34589970#) includes example projects & git repos, video tutorials, as well as in-depth discussion of rule authoring, decision tables & scorecards.
