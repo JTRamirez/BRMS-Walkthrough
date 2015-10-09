@@ -1,18 +1,39 @@
 # Documentation
 
-This is where it all starts, your first path page. This page is your chance to make a great first impression. So let your personality come through and make sure to get your learners excited about embarking on your path.
+This path was compiled based on the information available on a wide variety of sources, and thankfully most of theser are freely available online. That said, and somewhat frustratingly, online documentation for much of BRMS and its associated contents (Guvnor, Maven, KIE Workbench, etc.) and APIs (KIE, REST) are either dispersed across many channels, or remain hard to come by altogether – so this resource page will hopefully reduce any necessary hunting should you need to learn anything beyond the scope of this path.
 
-The best way to keep your learners' attention is with a crisp description of what your path is all about. For this sample path, the goal is get you started with creating your own Outlearn content as fast as possible. The target audience is **you**, and anyone else wanting to share amazing learning resources with other devs on a platform specifically built to let your content shine.
+The below links encompass documentation, presentations, videos, and related media that should prove to be helpful in learning more about BRMS, and understanding the process in which it is installed and deployed. This is particularly true for rule authoring (understanding syntax and scope) and app development (APIs, methods, etc.), and I’ve thus organized the links toward these functions.
 
-Next, it's important to highlight what learners should get out of your course.  For example, pretty soon you will be able to:
+### Resources for installation:
 
-* Fork your own copy of this template learning repository
-* Publish your own path into Outlearn
-* Enrich your Markdown with things like _Todos_ or _Unfurled Links_
+* Part One of Red Hat’s BRMS Cool Store demos – walks through a basic installation of BRMS on top of EAP & RHEL:
+•	Part 1: http://www.jboss.org/video/vimeo/65222228/
+Section One of Red Hat’s online workshop – provides an online slide deck and basic instruction for installing BRMS.
+•	http://www.schabell.org/2014/03/redhat-jboss-brms-online-workshop-coolstore-intro-lab1-2.html
 
-Make sure to set the right expectations about time and effort as well. For example, this sample path is quite short, no more than 5 minutes.  Of course, if you decide to start working on your own path, there's no telling...time stands still when a great developer gets deep in the flow!
+### Resources for development:
 
-No matter what kind of a role you are in, you are most likely teaching people. That includes on-boarding a new colleague, mentoring a junior developer, managing a team, or spreading the word about an open source project. We bet that we can make it easier for you to do some of that teaching. Go on and give it a try.
+Example Projects via Red Hat’s JBoss BRMS Starter Kit – notably, the “Weight Watchers Realtime Decision Server” and “Loan Realtime Decision Server” example projects. These are perhaps the most informative with respect to illustrating what app integration looks like, and how (and what kinds of) logic should be constructed within BRMS. (For each of the example projects, functional dummy apps and rules are already configured, and have their logic processed via BRMS). It’s highly recommended to go through these with a fresh installation of RHEL on a virtual machine:
+•	http://www.schabell.org/p/jboss-brms-starter-kit.html
+Ruling with Drools RE. An excellent walkthrough (with full example) of implementing a rules engine in a Java app. The example uses a local rules repository, rather than a remote/centralized one, but the guide is informative nevertheless:
+•	https://pkghosh.wordpress.com/2010/11/20/ruling-with-drools-rule-engine/ 
 
-Cheers,  
-The Outlearn Team
+### Resources for rule creation:
+
+Parts Two & Three of Red Hat’s BRMS Cool Store demos – illustrates rule creation, guided decision tables, and navigating BRMS’s interface.
+•	Part 2: http://www.jboss.org/video/vimeo/65224122/
+•	Part 3: http://www.jboss.org/video/vimeo/65226780/
+Sections 2-10 of Red Hat’s online workshop – offers  a walkthrough of BRMS installation, rule authoring, creating tables, and running through test scenarios via the Cool Store demo.
+•	http://www.schabell.org/2014/03/redhat-jboss-brms-online-workshop-coolstore-intro-lab1-2.html
+
+### Additional content:
+Red Hat’s Cool Store Demo is available as a git repo at the following address, with instructions for installation (ensure that Java and Maven are installed beforehand, and include the Red Hat software when installing as instructed by the included documentation):
+•	https://github.com/jbossdemocentral/brms-coolstore-demo/tree/v2.0
+
+For some reason, the HTML/hosted version of Red Hat’s JBoss BRMS 6.0 Development Guide deviates from the downloadable PDF version noticeably, and contains both more content, and more sections. I highly suggest reading through it (with a focus on Sections 2-3 for those unfamiliar with Rules Engines; Sections 4-5 for key development information; and Sections 6 and 8 for rule authoring):
+•	https://access.redhat.com/documentation/en-US/Red_Hat_JBoss_BRMS/6.0/html-single/Development_Guide/ 
+The documentation for JBoss Drools is much more complete, and resources for Drools much more prevalent, than the equivalent online resources for Red Hat’s BRMS solution. However, BRMS is essentially a repackaged version of Drools, and thus much of the documentation for the latter applies to the former. Particularly for rule authoring, syntax, API information, and development guidance, the following resources should be of use:
+•	Drools 6.3.0 final documentation (always look for up-to-date documentation on the drools.org website): http://docs.jboss.org/drools/release/6.3.0.Final/drools-docs/html_single/index.html
+•	Drools helloworld-brms example project: http://www.jboss.org/quickstarts/brms/helloworld-brms/
+•	Drools 6.0 Red Hat Summit presentation deck (includes example projects & git repos, video tutorials, and in-depth discussion of rule authoring, decision tables & scorecards): http://www.slideshare.net/MarkProctor/drools-60-red-hat-summit-34589970#
+
