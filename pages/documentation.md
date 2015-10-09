@@ -4,21 +4,26 @@ This path was compiled based on the information available on a wide variety of s
 
 The below links encompass documentation, presentations, videos, and related media that should prove to be helpful in learning more about BRMS, and understanding the process in which it is installed and deployed. This is particularly true for rule authoring (understanding syntax and scope) and app development (APIs, methods, etc.), and I’ve thus organized the links toward these functions.
 
-### Resources for installation:
+## Resources for installation:
 
-* Part One of Red Hat’s BRMS Cool Store demos – walks through a basic installation of BRMS on top of EAP & RHEL:
-•	Part 1: http://www.jboss.org/video/vimeo/65222228/
-Section One of Red Hat’s online workshop – provides an online slide deck and basic instruction for installing BRMS.
-•	http://www.schabell.org/2014/03/redhat-jboss-brms-online-workshop-coolstore-intro-lab1-2.html
+### Demos:
 
-### Resources for development:
+Part One of Red Hat’s BRMS Cool Store demo walks through a basic installation of BRMS on top of EAP & RHEL. http://www.jboss.org/video/vimeo/65222228/
 
-Example Projects via Red Hat’s JBoss BRMS Starter Kit – notably, the “Weight Watchers Realtime Decision Server” and “Loan Realtime Decision Server” example projects. These are perhaps the most informative with respect to illustrating what app integration looks like, and how (and what kinds of) logic should be constructed within BRMS. (For each of the example projects, functional dummy apps and rules are already configured, and have their logic processed via BRMS). It’s highly recommended to go through these with a fresh installation of RHEL on a virtual machine:
+### Workshops:
+
+Section One of Red Hat’s online workshop provides an online slide deck, as well as instructions for installing BRMS. http://www.schabell.org/2014/03/redhat-jboss-brms-online-workshop-coolstore-intro-lab1-2.html
+
+## Resources for development:
+
+### Demos:
+
+The example projects from Red Hat’s JBoss BRMS Starter Kit – notably, the “Weight Watchers Realtime Decision Server” and “Loan Realtime Decision Server” – are perhaps the most nformative with respect to illustrating what app integration looks like, and how (and what kinds of) logic should be constructed within BRMS. For each of the example projects, functional dummy apps and rules are already configured, and their logic ssed via BRMS). It’s highly recommended to go through these with a fresh installation of RHEL on a virtual machine:
 •	http://www.schabell.org/p/jboss-brms-starter-kit.html
 Ruling with Drools RE. An excellent walkthrough (with full example) of implementing a rules engine in a Java app. The example uses a local rules repository, rather than a remote/centralized one, but the guide is informative nevertheless:
 •	https://pkghosh.wordpress.com/2010/11/20/ruling-with-drools-rule-engine/ 
 
-### Resources for rule creation:
+## Resources for rule creation:
 
 Parts Two & Three of Red Hat’s BRMS Cool Store demos – illustrates rule creation, guided decision tables, and navigating BRMS’s interface.
 •	Part 2: http://www.jboss.org/video/vimeo/65224122/
@@ -26,7 +31,7 @@ Parts Two & Three of Red Hat’s BRMS Cool Store demos – illustrates rule crea
 Sections 2-10 of Red Hat’s online workshop – offers  a walkthrough of BRMS installation, rule authoring, creating tables, and running through test scenarios via the Cool Store demo.
 •	http://www.schabell.org/2014/03/redhat-jboss-brms-online-workshop-coolstore-intro-lab1-2.html
 
-### Additional content:
+## Additional content:
 Red Hat’s Cool Store Demo is available as a git repo at the following address, with instructions for installation (ensure that Java and Maven are installed beforehand, and include the Red Hat software when installing as instructed by the included documentation):
 •	https://github.com/jbossdemocentral/brms-coolstore-demo/tree/v2.0
 
