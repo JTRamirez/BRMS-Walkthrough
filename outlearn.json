@@ -11,6 +11,11 @@
         {"page" : "./pages/introduction.md"},
         {"module" : "part-one-whats-a-rule-engine-anyway"},
         {"module" : "part-two-installing-brms"},
+        {"module" : "part-three-exploring-the-brms-web-interface"},
+        {"module" : "part-four-rule-authoring-101"},
+        {"module" : "part-five-brms-for-application-developers"},
+        {"module" : "part-six-putting-it-all-together"},
+        {"module" : "part-seven-advanced-topics"},
         {"page" : "./pages/conclusion.md"}
       ]
     }
@@ -18,7 +23,12 @@
 
   "modules" : [
     {"olm" : "./modules/part-one-whats-a-rule-engine-anyway.md"},
-    {"olm" : "./modules/part-two-installing-brms.md"}
+    {"olm" : "./modules/part-two-installing-brms.md"},
+    {"olm" : "./modules/part-three-exploring-the-brms-web-interface.md"},
+    {"olm" : "./modules/part-four-rule-authoring-101.md"},
+    {"olm" : "./modules/part-five-brms-for-application-developers.md"},
+    {"olm" : "./modules/part-six-putting-it-all-together.md"},
+    {"olm" : "./modules/part-seven-advanced-topics.md"}
   ],
 
   "assets" : [
