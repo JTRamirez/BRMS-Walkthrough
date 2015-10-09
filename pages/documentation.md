@@ -16,9 +16,9 @@ The below links encompass documentation, presentations, videos, and related medi
 ### Workshops:
 
 [Section One of Red Hat’s online workshop](http://www.schabell.org/2014/03/redhat-jboss-brms-online-workshop-coolstore-intro-lab1-2.html) provides an online slide deck, as well as instructions for installing BRMS. 
-
-
-
+   
+   
+   
 ## Resources for development
 ---
 ### Demos:
