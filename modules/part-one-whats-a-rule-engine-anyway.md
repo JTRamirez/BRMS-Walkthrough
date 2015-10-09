@@ -1,9 +1,9 @@
 <!--
 {
-"name": "awesome-first-module",
+"name": "part-one-whats-a-rule-engine-anyway",
 "version" : "0.1",
-"title" : "My Outlearn Module",
-"description" : "This module will grow to be the best module ever",
+"title" : "Part I: What's a Rules Engine, anyway?",
+"description" : "A high-level summary of the function and purpose of a rules engine.",
 "homepage" : "https://github.com/outlearn-content/outlearn-modules",
 "freshnessDate" : 2015-07-08,
 "license" : "CC BY 4.0"
