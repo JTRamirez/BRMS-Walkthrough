@@ -1,9 +1,9 @@
 <!--
 {
-"name": "part-two-installing-brms",
+"name": "part-five-brms-for-application-developers.md",
 "version" : "0.1",
-"title" : "Part II: Installing BRMS",
-"description" : "How to install Red Hat's BRMS solution.",
+"title" : "Part V: BRMS for application developers",
+"description" : "A summary of Red Hat's APIs, and explainers for how an application can integrate with BRMS.",
 "homepage" : "https://github.com/outlearn-content/outlearn-modules",
 "freshnessDate" : 2015-07-08,
 "license" : "CC BY 4.0"
