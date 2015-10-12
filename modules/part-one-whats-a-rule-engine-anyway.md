@@ -120,13 +120,9 @@ selectTaxRateSchedule() {
 }
 ```
 
-And this is all just to find the right schedule! We haven't even begun to consider many deductions, or the myriad of othe
+And this is all just to find the right schedule! We haven't even begun to consider many deductions, or all of the other rules and conditions that apply before we can perform calculation. And this is with fairly repetitive logic that's using very obvious names for variables and functions.
 
-
-
-e fairly repetitive logic that's hard to read through even as we've tried to use very obvious names for variables and functions.
-
-Hopefully thisAn application that simultaneously uses only a few of these kinds of rules, but processes thousands of transactions at a time, can quickly be burdened with bugs if a developer hasn't thought through the myriad of possible outcomes from these logical rules at runtime. And, even if a developer creates perfectly bug-free code for this logic, they still have to consider if the rules are written in such a way that, in runtime, they don't utilize more resources than absolutely necessary to find the desired results.
+Hopefully, this helps to illustrate how combining simple rules and churning thousands of transactions through them can quickly be burdensome, and prone to bugs if a developer hasn't thought through the myriad of possible outcomes from these logical rules at runtime. And, even if a developer creates perfectly bug-free code for this logic, they still have to consider if the rules are written in such a way that, in runtime, they don't utilize more resources than absolutely necessary to find the desired results.
 
 There are other challenges as well. What if we need to change some of these tax rates? What if we want to modify what ranges are covered by what rates? How about adding new tax brackets entirely? In the above example, since all of this logic lives in the application as Java code, we have to have a developer look through the source, find the code, and make changes. We then have to re-test and re-deploy the application. All of this is incredibly time consuming and expensive, even though the change itself is fundamentally quite simple in principle and small in scope.
 
