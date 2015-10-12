@@ -90,9 +90,11 @@ end
 
 Rules have a name that is declared immediately; optional attributes which allow for the behaviour of rules to be modified ("salience" in the above example being a value that determines the priority of rules as they enter the queue to be activated); `when` and `then` elements which determine what fires the rule, and what the rule does once fired; and an `end` statement that closes the rule.
 
+Within attributes alone there are a plethora of options, but Red Hat does a good job of documenting these, as well as all the other additional flags and other features [supported by Drools](http://docs.jboss.org/drools/release/6.3.0.Final/drools-docs/html/index.html). Most of the time, however, the above options will suffice.
+
 ####Decision Tables
 
-Decision tables are notably different from DRL's in that they are structured as spreadsheets, rather than as contiguous files. In fact, standard CSV spreadsheets, and even Excel spreadsheets, can be used as decision tables, making them particulalry accessible and flexible to those who are not accostumed to some of the syntax and 
+Decision tables are notably different from DRLs in that they are structured as spreadsheets, rather than as contiguous files. In fact, standard CSV spreadsheets, and even Excel spreadsheets, can be used as decision tables, making them particulalry accessible and flexible to those who are not accostumed to some of the syntax and 
 
 <!-- @section -->
 
