@@ -18,34 +18,115 @@
 * The benefits and challenges of a Rules Engine
 * What this Outlearn path will cover
 
-
-<!-- @section -->
+<br /><br />
 
 ### The definition of a Rules Engine
 
 Fundamentally, a rules engine is:
 
-> A technological system, used by organizations, that's *purpose-built to process logical operations*, usually in the form of "When [condition], then [action]".
+> A technological system, used by organizations, that's *purpose-built to process logical operations*, usually in the form of "when [condition], then [action]".
 
-Rather than encompass a bunch of application components, or provide a discrete function in and of itself, rules engines are narrowly focused on performing and organizing the decision-making processes that usually exist within most applications. Thus, instead of replacing other solutions, they are meant to be augmented by existing ones, through the centralization of rules and logic.
+Rather than encompass a bunch of application components, or provide a discrete function in and of itself, rules engines are narrowly focused on performing and organizing the decision-making processes that usually exist within the code of most applications. Thus, instead of replacing other solutions, they are meant to be augmented by existing ones, through the centralization of rules and logic.
 
-The best way to conceptualize this is to perhaps consider how applications are traditionally created. In the vast majority of circumstances, apps are made to be entirely encapsulated, so that any variables or logical decisions that they process are written in the same code that performs other functionality. So, for example, a Java-powered tax calculator may have the following code that determines the marginal tax rate of an individual based on their salary:
+The best way to conceptualize this is to consider how applications are traditionally created. In the vast majority of circumstances, apps are made to be entirely encapsulated, so that any variables or logical decisions that they process are written in the same code that performs all other functionality. So, for example, a Java-powered tax calculator may have the following code (a function call) that determines the marginal tax rate of an individual based on their income:
 
 ```java
-double salary = keyboard.nextDouble();
-
-if (salary > 50000) {
-  marginalTaxRate == .25;
-  }
-else if (salary > 30000) {
-  marginalTaxRate == .20;
-  }
-else {
-  marginalTaxRate == .15;
-  }
+findIndividualMarginalTaxRate(double income) {
+  if (income > 90750) {
+    marginalRate == .28;
+    }
+  else if (income > 37450) {
+    marginalRate == .25;
+    }
+  else if (income > 9225) {
+    marginalRate == .15;
+    }
+  else {
+    marginalRate == .1;
+    }
+  return marginalRate;
+}
 ```
 
-As simple as this example is, it isn't hard to consider less straightforward logical constructs, and in particular how complex these become if they are interwoven or co-dependant. An application that simultaneously uses only a few of these kinds of rules, but processes thousands of transactions at a time, can quickly be burdened with bugs if a developer hasn't thought through the myriad of possible outcomes from these logical rules at runtime. And, even if a developer creates perfectly bug-free code for this logic, they still have to consider if the rules are written in such a way that, in runtime, they don't utilize more resources than absolutely necessary to find the desired results.
+As simple as this example is, it isn't hard to consider less straightforward logical constructs, and in particular how complex these become if they are interwoven or co-dependant. Imagine if we also function calls for determining which tax rates apply to various individuals, and had to roll these up into a function that would select the correct tax schedule to use in calculation:
+
+```java
+marrigeStatus(bool isMarried) {
+  if (married == 1) {
+    return 1;
+    }
+  return 0;
+}
+
+jointRetun(bool relationshipStatus, bool isJoint) {
+  if (marriageStatus(relationshipStatus) == 1) {
+    if (bool isJoint == 1) {
+     return 1; 
+    }
+  }
+  return 0;
+}
+
+headOfHousehold(bool isHeadOfHousehold) {
+  if (isHeadOfHousehold == 1_ {
+    return 1;
+  }
+  return 0;
+}
+```
+
+The resultant wrapped-up function might look like this:
+
+```java
+final class taxProfile {
+  private final double marginalRate;
+  private final int standardDeduction;
+  
+  public myTaxProfile(double marginalRate, int standardDeduction) {
+    this.marginalRate = marginalRate;
+    this.standardDeduction = standardDeduction;
+  }
+
+  public double getMarginalRate() {
+    return marginalRate;
+  }
+
+  public int getStandardDeduction() {
+    return standardDeduction;
+  }
+}
+
+...
+
+selectTaxRateSchedule() {
+  if (marrigeStatus(isMarried) == 1) {
+    if jointReturn(isJoint) == 1) {
+      return new myTaxProfile(findJointMarginalTaxRate(income), 12600);
+    }
+    else {
+      return new myTaxProfile(findIndividualMarriedMarginalTaxRate(income), 6300);
+    }
+  }
+  else if (headOfHousehold(isHeadOfHouse) == 1) {
+    return new myTaxProfile(findHeadOfHouseholdMarginalTaxRate(income), 9250);
+  }
+  else if (trustAndEstate(isTrustOrEstate) == 1) {
+    return new myTaxProfile(findTrustAndEstateMarginalTaxRate(income), 0);
+  }
+  else {
+    return new myTaxProfile(findIndividualMarginalTaxRate(income), 6300);
+  }
+  throw new IncorrectDataException();
+}
+```
+
+And this is all just to find the right schedule! We haven't even begun to consider many deductions, or the myriad of othe
+
+
+
+e fairly repetitive logic that's hard to read through even as we've tried to use very obvious names for variables and functions.
+
+Hopefully thisAn application that simultaneously uses only a few of these kinds of rules, but processes thousands of transactions at a time, can quickly be burdened with bugs if a developer hasn't thought through the myriad of possible outcomes from these logical rules at runtime. And, even if a developer creates perfectly bug-free code for this logic, they still have to consider if the rules are written in such a way that, in runtime, they don't utilize more resources than absolutely necessary to find the desired results.
 
 There are other challenges as well. What if we need to change some of these tax rates? What if we want to modify what ranges are covered by what rates? How about adding new tax brackets entirely? In the above example, since all of this logic lives in the application as Java code, we have to have a developer look through the source, find the code, and make changes. We then have to re-test and re-deploy the application. All of this is incredibly time consuming and expensive, even though the change itself is fundamentally quite simple in principle and small in scope.
 
