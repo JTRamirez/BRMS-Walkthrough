@@ -155,4 +155,29 @@ Ultimately, however, rules engines can be very beneficial for environments that 
 
 This path is intended to provide a high level summary of the process for installing and using Red Hat's BRMS (Business Rules Management System) platform, with some particulars that should be helpful for developers and rules authors alike.
 
+<!-- @multipleChoice -->
+
+Pop quiz! What's a _rules engine_?
+
+- [ ] An enterprise solution for handling privileges for various accounts.
+- [ ] A system that decides what applications to use, and when to use them.
+- [X] A system that processes logical operations, and centrally stores such business logic.
+- [ ] An injection-based diesel combustion engine that hypothetically meets strict EPA emissions standards.
+
+Which of the following _is not_ a benefit to using a rules engine?
+
+- [ ] Centralizing business rules makes such logic easier to administrate and modify.
+- [ ] Using a rules engine can sometimes speed up how quickly data is processed logically.
+- [ ] The syntax of business rules is easier to understand and work with, even for non-programmers.
+- [X] Implementing a rules engine simplifies the technology landscape it is a part of.
+
+Which of the following _is_ a potential pitfall to using a rules engine?
+
+- [X] Rules engines have a high upfront cost and require both training and ongoing learning.
+- [ ] Editing rules is harder and more time-consuming than editing application code.
+- [ ] A well-implemented rules engine can make various other applications and systems redundant.
+- [ ] Rules engines require massive amounts of storage and compute resources to function properly.
+
+<!-- @end -->
+
 <!-- @end -->
