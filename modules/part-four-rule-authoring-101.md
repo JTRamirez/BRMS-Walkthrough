@@ -25,13 +25,15 @@
 
 ### Intoduction to rules and decision tables
 
-Although the Project Authoring interface enables one to create a variety of files, the two primary file types that tend to contain the great majority of logic are _DRL files_, and _Decision Tables_.
+Although the Project Authoring interface enables one to create a variety of files, the two primary file types that tend to contain the great majority of logic are _DRL files_, and _Decision Tables_. Most of the time, DRL files will be the means with which to write and store logic, but Decision Tables can make more sense for particular instances or use cases.
 
 <!-- @section -->
 
 ### Business rules (DRL files)
 
 DRL files are "Drools Rule Language" files (recall that Red Hat BRMS is built upon [Drools](http://drools.org/), among other projects). They are intended to hold all of the discrete rules a particular application may need, and in many respects the writing paradigm for DRL files may remind a developer of programming in a modern language such as Java - indents are used to organize content, functions and various kinds of content are declared with similar syntax, and so forth. That said, many of the finiky rules such as trailing semicolons or mandatory curly braces are omitted, and the rules themselves have a fairly rigid structure that is meant to keep them as readable as possible.
+
+![](https://cloud.githubusercontent.com/assets/15032492/10436472/8f620c10-70f4-11e5-9647-605a79e2ad08.png)
 
 <!-- @section -->
 
@@ -104,11 +106,9 @@ Finally, Drools supports a very useful feature called "Domain Specific Languages
 
 ### Decision tables
 
-####Decision Tables
+Decision tables are notably different from DRLs in that they are structured as spreadsheets, rather than as contiguous files. In fact, standard CSV spreadsheets, and even Excel spreadsheets, can be used as decision tables, making them particulalry accessible and flexible to those who are not accostumed to some of the syntax used in DRLs.
 
-Decision tables are notably different from DRLs in that they are structured as spreadsheets, rather than as contiguous files. In fact, standard CSV spreadsheets, and even Excel spreadsheets, can be used as decision tables, making them particulalry accessible and flexible to those who are not accostumed to some of the syntax and 
-
-
+![](https://cloud.githubusercontent.com/assets/15032492/10436458/779a4250-70f4-11e5-80cc-a5c4bda2f35b.png)
 
 Composed in files, rules are logical statements. Can be interdependant. Algorithms process data against these rules and yield data back to applications (PHREAK is covered in the Advanced topics section)
 
