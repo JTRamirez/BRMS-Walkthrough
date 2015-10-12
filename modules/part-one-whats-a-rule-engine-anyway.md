@@ -166,6 +166,8 @@ Pop quiz! What's a _rules engine_?
 
 <!-- @end -->
 
+<!-- @multipleChoice -->
+
 Which of the following _is not_ a benefit to using a rules engine?
 
 - [ ] Centralizing business rules makes such logic easier to administrate and modify.
@@ -174,6 +176,8 @@ Which of the following _is not_ a benefit to using a rules engine?
 - [X] Implementing a rules engine simplifies the technology landscape it is a part of.
 
 <!-- @end -->
+
+<!-- @multipleChoice -->
 
 Which of the following _is_ a potential pitfall to using a rules engine?
 
