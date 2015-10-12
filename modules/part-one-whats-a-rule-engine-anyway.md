@@ -164,12 +164,16 @@ Pop quiz! What's a _rules engine_?
 - [X] A system that processes logical operations, and centrally stores such business logic.
 - [ ] An injection-based diesel combustion engine that hypothetically meets strict EPA emissions standards.
 
+<!-- @end -->
+
 Which of the following _is not_ a benefit to using a rules engine?
 
 - [ ] Centralizing business rules makes such logic easier to administrate and modify.
 - [ ] Using a rules engine can sometimes speed up how quickly data is processed logically.
 - [ ] The syntax of business rules is easier to understand and work with, even for non-programmers.
 - [X] Implementing a rules engine simplifies the technology landscape it is a part of.
+
+<!-- @end -->
 
 Which of the following _is_ a potential pitfall to using a rules engine?
 
