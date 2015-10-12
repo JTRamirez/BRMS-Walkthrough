@@ -24,7 +24,13 @@
 
 ### Installing Red Hat Linux Enterprise
 
-BRMS should be installed on the most recent non-beta version of Red Hat Enterprise Linux (RHEL).
+BRMS should be installed on the most recent non-beta version of Red Hat Enterprise Linux (RHEL). To download the latest version, simply navigate to Red Hat's Software and Download Center on their Customer Portal:
+
+`https://access.redhat.com/downloads`
+
+Look for the "Red Hat Enterprise Linux" product in the list:
+
+!(https://cloud.githubusercontent.com/assets/15032492/10430080/33a36776-70cb-11e5-86a7-fb83f2ae43fa.PNG)
 
 <!-- @section -->
 
