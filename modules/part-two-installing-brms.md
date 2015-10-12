@@ -76,7 +76,7 @@ The download page automatically selects the most recent stable version of any so
 
 Since both of these downloads are Java packages, just use the Terminal to execute them, and follow the steps in the installer. Using `su` to run as root, `cd` to the directory you've downloaded the applications into, and then run:
 
-`java jar APPLICATION_FILE_NAME`
+`java -jar 'APPLICATION_FILE_NAME'`
 
 <!-- @section -->
 
