@@ -25,8 +25,46 @@
 
 ### Intoduction to rules and decision tables
 
+Although the Project Authoring interface enables one to create a variety of files, the two primary file types that tend to contain the great majority of the logic are DRL files, and Decision Tables.
+
+####DRL Files
+
+DRL files are "Drools Rule Language" files (recall that Red Hat BRMS is built upon [Drools](http://drools.org/), among other projects). They are intended to hold all of the discrete rules an application may need
+
+The file itself has a particular structure, which looks like this:
+
+```drl
+package package-name
+
+imports
+
+globals
+
+functions
+
+queries
+
+rules
+```
+
+Rules themselves follow a basic structure:
+
+```drl
+rule "name"
+	attributes
+	when
+		[condition, or "Left Hand Side"]
+	then
+		[outcome, or "Right Hand Side"]
+end
+```
+
 The difference (Statements versus inter-related tableture. How they're authored. How they're stored)
 
+
+####Decision Tables
+
+Decision tables are notably different from DRL's in that they are structured as spreadsheets, rather than as contiguous files. In fact, standard CSV spreadsheets, and even Excel spreadsheets, can be used as decision tables, making them particulalry accessible and flexible to those who are not accostumed to some of the syntax and 
 
 <!-- @section -->
 
