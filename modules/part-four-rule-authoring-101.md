@@ -29,35 +29,56 @@ Although the Project Authoring interface enables one to create a variety of file
 
 ####DRL Files
 
-DRL files are "Drools Rule Language" files (recall that Red Hat BRMS is built upon [Drools](http://drools.org/), among other projects). They are intended to hold all of the discrete rules an application may need
+DRL files are "Drools Rule Language" files (recall that Red Hat BRMS is built upon [Drools](http://drools.org/), among other projects). They are intended to hold all of the discrete rules a particular application may need, and in many respects the writing paradigm may remind a developer of programming in a modern language such as Java - rules group content in curly braces, indents are used to organize content, and so forth.
 
 The file itself has a particular structure, which looks like this:
 
 ```drl
 package package-name
 
-imports
+imports // Can contain things like Java classes and types, that might be used in rules
 
-globals
+globals // Generally provide static information for rules
 
-functions
+functions // Operations rules can perform when fired
 
-queries
+queries // Pulls data for use in rule processing
 
-rules
+rules // The rules themselves
 ```
+
+Outside of declaring the package name, none of these elements is mandatory, and with the exception of rules, adding these elements is done in a simelar fashion to doing the same in Java. Even rules can be omitted, in fact, though the practicality of that is unsurprisingly questionable.
 
 Rules themselves follow a basic structure:
 
 ```drl
 rule "name"
-	attributes
+	<attributes>
 	when
-		[condition, or "Left Hand Side"]
+		<condition>
 	then
-		[outcome, or "Right Hand Side"]
+		<outcome>
 end
 ```
+
+Such that, an example of a simple rule that filters auto insurance applicants might look like:
+
+```drl
+rule "Approve if not rejected"
+	salience -100
+	agenda-group "approval"
+		when
+			not Rejection() 
+			p : Policy(approved == false, policyState:status)
+			exists Driver(age > 25)
+			Process(status == policyState)
+		then
+			log("APPROVED: due to no objections."); 
+			p.setApproved(true);
+end
+```
+
+Finally, rules themselves can utilize keywords, which are either _hard_ or _soft_. 
 
 The difference (Statements versus inter-related tableture. How they're authored. How they're stored)
 
