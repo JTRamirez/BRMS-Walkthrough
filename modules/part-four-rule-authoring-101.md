@@ -118,10 +118,10 @@ Consequently, as you might expect the cells that make up these rows and columns 
 
 ### Decision tables syntax
 
-Of course, rules and rule files aren’t the only way to create and store logic. Decision tables are an alternate method, which Red Hat describes succinctly as such:
+Red Hat describes Decision Tables succinctly as such:
 
 > Decision tables are a "precise yet compact" (ref. Wikipedia) way of representing conditional logic, and they are well suited to business level rules. Red Hat JBOSS BRMS supports managing rules in a spreadsheet format. Supported formats are Excel (XLS) and CSV; accordingly, a variety of spreadsheet programs (such as Microsoft Excel) can be utilized… Consider decision tables as a course of action if rules exist that can be expressed as rule templates and data: each row of a decision table provides data that is combined with a template to generate a rule. Decision tables are not recommended for rules that do not follow a set of templates or where there are a small number of rules.
 
-In layman’s terms, decision tables are great when rules or logic are highly related and follow the same structure, and especially when they cover ranges (“When the temperature is under 60, then return “Bring a coat”; When the temperature is over 80, then return “Wear a shirt”; etc.). Same as with rules, these are created via the BRMS web application interface.
+In layman’s terms, decision tables are great when rules or logic are highly related and follow the same structure, and especially when they cover ranges (“When the temperature is under 60, then return “Bring a coat”; When the temperature is over 80, then return “Wear a shirt”; etc.). And, while as with rules, they can be created via the BRMS web application interface, standard spreadsheet apps can also be used.
 
 <!-- @end -->
