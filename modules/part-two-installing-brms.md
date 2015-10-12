@@ -84,4 +84,12 @@ Since both of these downloads are Java packages, just use the Terminal to execut
 
 Finally, once all else is in place, importing and Java development of any kind is generally handled by the JBoss BRMS Developer Studio (which is a version of Eclipse with EAP and BRMS-related tools installed), though rules authoring itself is intended to be done via BRMS. Red Hat provides an Eclipse plug-in that integrates some EAP and BRMS development tools into the Java IDE, and packages this into a unified solution as their EAP Development Platform (for RHEL). Much of this is documented in their BRMS 6.1 Administration and Configuration guide (A&C) mentioned earlier, but to download one simply navigates to the same Software and Download Center mentioned earlier.
 
+When you're ready to launch EAP and BRMS, ensure that you're root (`su`) and `cd` to the directory you've installed EAP in (e.g. 'EAP-6.4.0'). Then, enter
+
+`bin/standalone.sh`
+
+to launch the JBoss Bootstrap Environment, with the script automatically starting all the requisite services:
+
+![](https://cloud.githubusercontent.com/assets/15032492/10431155/82bc47f0-70d1-11e5-93c8-15d356c33c1a.PNG)
+
 <!-- @end -->
