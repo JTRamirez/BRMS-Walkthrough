@@ -31,7 +31,8 @@ Rather than encompass a bunch of application components, or provide a discrete f
 
 The best way to conceptualize this is to perhaps consider how applications are traditionally created. In the vast majority of circumstances, apps are made to be entirely encapsulated, so that any variables or logical decisions that they process are written in the same code that performs other functionality. So, for example, a Java-powered tax calculator may have the following code that determines the marginal tax rate of an individual based on their salary:
 
-`double salary = keyboard.nextDouble();
+```java
+double salary = keyboard.nextDouble();
 
 if (salary > 50000) {
   marginalTaxRate == .25;
@@ -41,7 +42,8 @@ else if (salary > 30000) {
   }
 else {
   marginalTaxRate == .15;
-  }`
+  }
+```
 
 As simple as this example is, it isn't hard to consider less straightforward logical constructs, and in particular how complex these become if they are interwoven or co-dependant. An application that simultaneously uses only a few of these kinds of rules, but processes thousands of transactions at a time, can quickly be burdened with bugs if a developer hasn't thought through the myriad of possible outcomes from these logical rules at runtime. And, even if a developer creates perfectly bug-free code for this logic, they still have to consider if the rules are written in such a way that, in runtime, they don't utilize more resources than absolutely necessary to find the desired results.
 
