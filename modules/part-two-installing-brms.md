@@ -30,7 +30,7 @@ BRMS should be installed on the most recent non-beta version of Red Hat Enterpri
 
 Look for the "Red Hat Enterprise Linux" product in the list:
 
-!(https://cloud.githubusercontent.com/assets/15032492/10430080/33a36776-70cb-11e5-86a7-fb83f2ae43fa.PNG)
+![](https://cloud.githubusercontent.com/assets/15032492/10430080/33a36776-70cb-11e5-86a7-fb83f2ae43fa.PNG)
 
 <!-- @section -->
 
