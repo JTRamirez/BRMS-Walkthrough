@@ -58,7 +58,7 @@ For Maven, go to Apache's download page:
 
 Any of the downloads in the box will work, but the source has to be built before use, so it's reccomended to just download the binary and unpack it.
 
-![maven](https://cloud.githubusercontent.com/assets/15032492/10430383/edcf99de-70cc-11e5-9e74-25e88d2fa075.PNG)
+![](https://cloud.githubusercontent.com/assets/15032492/10430383/edcf99de-70cc-11e5-9e74-25e88d2fa075.PNG)
 
 Apache provides simple instructions for installing both on their website, and on the README within the downloaded archive.
 
@@ -66,14 +66,17 @@ Apache provides simple instructions for installing both on their website, and on
 
 ### Installing Red Hat's EAP and BRMS
 
-We can now finally install the actual rules engine and associated software! BRMS does require Red Hat’s Enterprise Application Platform (EAP), so we'll first install that. Once again, navigate to Red Hat's Software and Download Center, and look for "Red Hat JBoss Enterprise Application Platform) in the JBoss Development and Management section of the page (about half-way down. Select that, and, on the download page itself, click the download link for "Red Hatt JBoss Enterprise Application Platform Installer":
+We can now finally install the actual rules engine and associated software! BRMS does require Red Hat’s Enterprise Application Platform (EAP), so we'll first install that. Once again, navigate to Red Hat's Software and Download Center, and look for "Red Hat JBoss Enterprise Application Platform) in the JBoss Development and Management section of the page (about half-way down. Select that, and, on the download page itself, click the download link for "Red Hat JBoss Enterprise Application Platform Installer":
 
 ![](https://cloud.githubusercontent.com/assets/15032492/10430709/b3577694-70ce-11e5-8416-caaceaad1cab.PNG)
 
-The download page automatically selects the most recent stable version of any software, so you don't need to worry about manually selecting the latest release. However, on the same page, you can use the Product dropdown to select BRMS and download the rules engine now:
+The download page automatically selects the most recent stable version of any software, so you don't need to worry about manually selecting the latest release. However, on the same page, you can use the Product dropdown to select BRMS and download the rules engine, while you're at it:
 
 ![](https://cloud.githubusercontent.com/assets/15032492/10430785/1f87be8c-70cf-11e5-97fc-f4e7d3e03ecf.PNG)
 
+Since both of these downloads are Java packages, just use the Terminal to execute them, and follow the steps in the installer. Using `su` to run as root, `cd` to the directory you've downloaded the applications into, and then run:
+
+`java jar APPLICATION_FILE_NAME`
 
 <!-- @section -->
 
