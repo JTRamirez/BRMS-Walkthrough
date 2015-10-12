@@ -25,13 +25,13 @@
 
 ### Intoduction to rules and decision tables
 
-Although the Project Authoring interface enables one to create a variety of files, the two primary file types that tend to contain the great majority of the logic are DRL files, and Decision Tables.
+Although the Project Authoring interface enables one to create a variety of files, the two primary file types that tend to contain the great majority of logic are _DRL files_, and _Decision Tables_.
 
 ####DRL Files
 
-DRL files are "Drools Rule Language" files (recall that Red Hat BRMS is built upon [Drools](http://drools.org/), among other projects). They are intended to hold all of the discrete rules a particular application may need, and in many respects the writing paradigm may remind a developer of programming in a modern language such as Java - rules group content in curly braces, indents are used to organize content, and so forth.
+DRL files are "Drools Rule Language" files (recall that Red Hat BRMS is built upon [Drools](http://drools.org/), among other projects). They are intended to hold all of the discrete rules a particular application may need, and in many respects the writing paradigm for DRL files may remind a developer of programming in a modern language such as Java - indents are used to organize content, functions and various kinds of content are declared with similar syntax, and so forth. That said, many of the finiky rules such as trailing semicolons or mandatory curly braces are omitted, and the rules themselves have a fairly rigid structure that is meant to keep them as readable as possible.
 
-The file itself has a particular structure, which looks like this:
+Before we get to the rules themselves, however, the DRL file in its entirety has a particular structure, which looks something like this:
 
 ```drl
 package package-name
@@ -47,7 +47,17 @@ queries // Pulls data for use in rule processing
 rules // The rules themselves
 ```
 
-Outside of declaring the package name, none of these elements is mandatory, and with the exception of rules, adding these elements is done in a simelar fashion to doing the same in Java. Even rules can be omitted, in fact, though the practicality of that is unsurprisingly questionable.
+Outside of declaring the package name, none of these elements are mandatory, but the order must follow the above sequence. With the exception of rules, however, adding these elements is done in a simelar fashion to doing the same in Java.
+
+```drl
+package exampleDRL
+
+import org.brms.helloworld
+import org.brms.example
+
+rule "example rule"
+...
+```
 
 Rules themselves follow a basic structure:
 
@@ -61,7 +71,7 @@ rule "name"
 end
 ```
 
-Such that, an example of a simple rule that filters auto insurance applicants might look like:
+Such that, an example of a simple rule that filters auto insurance applicants might look like this:
 
 ```drl
 rule "Approve if not rejected"
@@ -78,10 +88,7 @@ rule "Approve if not rejected"
 end
 ```
 
-Finally, rules themselves can utilize keywords, which are either _hard_ or _soft_. 
-
-The difference (Statements versus inter-related tableture. How they're authored. How they're stored)
-
+Rules have a name that is declared immediately; optional attributes which allow for the behaviour of rules to be modified ("salience" in the above example being a value that determines the priority of rules as they enter the queue to be activated); `when` and `then` elements which determine what fires the rule, and what the rule does once fired; and an `end` statement that closes the rule.
 
 ####Decision Tables
 
