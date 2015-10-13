@@ -46,27 +46,23 @@ Which of the following is the best definition for a _rules engine_?
 
 <!-- @multipleChoice -->
 
-What is Node.js?
+Select all of the following that constitute _benefits_ to implementing a rules engine.
 
-- [ ] A package manager for JavaScript packages
-- [ ] A front-end framework for heavy-traffic web applications
-- [X] A platform for scalable network applications
-- [ ] A system that administrates priviliges and access for applications, systems, and users.
-
-Remember that Node.js is more powerful than any individual use that it can be associated with.
+- [ ] Centralizing business rules makes such logic easier to administrate and modify.
+- [ ] The syntax of business rules is easier to understand and work with, compared to application code.
+- [ ] Updating business rules is significantly easier, faster, and more cost-effective than updating application code.
+- [ ] Rules engines can speed up logic processing, especially for applications with many rules.
 
 <!-- @end -->
 
 <!-- @multipleChoice -->
 
-What is Node.js?
+Select all of the following that constitute _pitfalls_ to implementing a rules engine.
 
 - [ ] A package manager for JavaScript packages
 - [ ] A front-end framework for heavy-traffic web applications
 - [X] A platform for scalable network applications
 - [ ] A system that administrates priviliges and access for applications, systems, and users.
-
-Remember that Node.js is more powerful than any individual use that it can be associated with.
 
 <!-- @end -->
 
