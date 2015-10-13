@@ -159,9 +159,9 @@ As the rules repository for BRMS is stored externally from all local application
 
 <!-- @multipleChoice -->
 
-As the rules repository for BRMS is stored externally from all local applications, how does an app access and use that logic?
+?
 
-- [ ] A KieBase installed in the application pings the remote repo, fetches rules when they're needed, and processes logic in working memory (of the application).
+- [ ] import; methods; services
 - [X] A KieScanner service installed in the application fetches rules and creates a rules cache in application memory at runtime, and updates the local cache by checking for updates periodically; a KieServices service lets the application interact with the cache.
 - [ ] A KieScanner service installed in the application fetches rules and creates a rules cache in application at runtime, and updates the local cache whenever KieScanner is restarted; a KieSession 
 - [ ] A KieServices service provides a unified interface whereby a rules cache is generated at runtime and stored in application memory; any and all rules updates or logic processing is handled by it.
