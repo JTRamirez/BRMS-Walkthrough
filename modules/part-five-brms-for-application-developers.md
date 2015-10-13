@@ -83,6 +83,6 @@ private static KnowledgeBase readKnowledgeBase() throws Exception {
 
 ### APIs & related documentation
 
-Tables and links go here
+Tables and links go here.
 
 <!-- @end -->
