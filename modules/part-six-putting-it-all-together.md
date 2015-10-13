@@ -48,7 +48,7 @@ Which of the following is the best definition for a _rules engine_?
 
 Select all of the following that constitute _benefits_ to implementing a rules engine.
 
-- [ ] XCentralizing business rules makes such logic easier to administrate and modify.
+- [X] XCentralizing business rules makes such logic easier to administrate and modify.
 - [ ] XThe syntax of business rules is easier to understand and work with, compared to application code.
 - [ ] XUpdating business rules is significantly easier, faster, and more cost-effective than updating application code.
 - [ ] XRules engines can speed up logic processing, especially for applications with many rules.
@@ -59,7 +59,7 @@ Select all of the following that constitute _benefits_ to implementing a rules e
 
 Select all of the following that constitute _pitfalls_ to implementing a rules engine.
 
-- [ ] Business rules and decision tables are harder for non-programmers to understand.
+- [X] Business rules and decision tables are harder for non-programmers to understand.
 - [ ] XRules engines have direct and indirect costs.
 - [ ] XA rules engine introduces some complexity to its environment, and to application development for apps that rely on it.
 - [ ] Rules engines require significant hardware and network upgrades to support the platform, in order to avoid large slowdowns in application processing.
