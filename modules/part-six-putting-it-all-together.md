@@ -14,14 +14,14 @@
 
 # What's covered in this section
 
-* The definition of a Rules Engine
-* The benefits and challenges of a Rules Engine
-* What this Outlearn path will cover
+* A high-level summary of everything covered so far
+* A final quiz
+* Concluding remarks
 
 
 <!-- @section -->
 
-### The definition of a Rules Engine
+### Summary
 
 Fundamentally, a rules engine is:
 
@@ -31,26 +31,141 @@ Rather than encompassing a bunch of application components, rules engines are na
 
 <!-- @section -->
 
-### The benefits and challenges of a Rules Engine
+### The final quiz
 
-It may seem unusual at first to effectively outsource intellignece from the application that's using the logic anyway, but abstracting logic from application code provides a variety of benefits:
+<!-- @multipleChoice -->
 
-* For logic that needs to be changed or updated often, it is usually time-consuming and expensive to perfom such updates when the logic is expressed in application code. Rules, comparatively, are easier to update, and are faster to deploy.
-* Logic expressed in programming languages like Java tend to be difficult to understand, especially for those who don't code frequently. Business rules, however, have a more legible syntax that is clearer to experienced programmers and BSA's alike.
-* Storing logic for multiple applications in a centralized repository makes it easier to access and edit.
+Which of the following is the best definition for a _rules engine_?
 
-Of course, rules engines have costs associated with them as well, including:
+- [ ] A platform that stores data and performs calculations for applications.
+- [X] A system that stores logic and processes logical operations for applications.
+- [ ] An application that can stand-in for many different kinds of other applications.
+- [ ] A system that administrates priviliges and access for applications, systems, and users.
 
-* Additional cost.
-* Increased complexity, both from a technology environment perspective, and an app development perspective.
-* Risk of slower applications, particularly when developers don't leverage the rules engine properly, and/or don't adapt the right mindset when composing rules (rule creation is very different from application development).
+<!-- @end -->
 
-Ultimately, however, rules engines can be very beneficial for environments that change rules often, desire faster rules deployment, want more understandable/accessible logic, or manage many rules across a variety of systems.
+<!-- @multipleChoice -->
+
+What is Node.js?
+
+- [ ] A package manager for JavaScript packages
+- [ ] A front-end framework for heavy-traffic web applications
+- [X] A platform for scalable network applications
+- [ ] A system that administrates priviliges and access for applications, systems, and users.
+
+Remember that Node.js is more powerful than any individual use that it can be associated with.
+
+<!-- @end -->
+
+<!-- @multipleChoice -->
+
+What is Node.js?
+
+- [ ] A package manager for JavaScript packages
+- [ ] A front-end framework for heavy-traffic web applications
+- [X] A platform for scalable network applications
+- [ ] A system that administrates priviliges and access for applications, systems, and users.
+
+Remember that Node.js is more powerful than any individual use that it can be associated with.
+
+<!-- @end -->
+
+<!-- @multipleChoice -->
+
+What is Node.js?
+
+- [ ] A package manager for JavaScript packages
+- [ ] A front-end framework for heavy-traffic web applications
+- [X] A platform for scalable network applications
+- [ ] A system that administrates priviliges and access for applications, systems, and users.
+
+Remember that Node.js is more powerful than any individual use that it can be associated with.
+
+<!-- @end -->
+
+<!-- @multipleChoice -->
+
+What is Node.js?
+
+- [ ] A package manager for JavaScript packages
+- [ ] A front-end framework for heavy-traffic web applications
+- [X] A platform for scalable network applications
+- [ ] A system that administrates priviliges and access for applications, systems, and users.
+
+Remember that Node.js is more powerful than any individual use that it can be associated with.
+
+<!-- @end -->
+
+<!-- @multipleChoice -->
+
+What is Node.js?
+
+- [ ] A package manager for JavaScript packages
+- [ ] A front-end framework for heavy-traffic web applications
+- [X] A platform for scalable network applications
+- [ ] A system that administrates priviliges and access for applications, systems, and users.
+
+Remember that Node.js is more powerful than any individual use that it can be associated with.
+
+<!-- @end -->
+
+<!-- @multipleChoice -->
+
+What is Node.js?
+
+- [ ] A package manager for JavaScript packages
+- [ ] A front-end framework for heavy-traffic web applications
+- [X] A platform for scalable network applications
+- [ ] A system that administrates priviliges and access for applications, systems, and users.
+
+Remember that Node.js is more powerful than any individual use that it can be associated with.
+
+<!-- @end -->
+
+<!-- @multipleChoice -->
+
+What is Node.js?
+
+- [ ] A package manager for JavaScript packages
+- [ ] A front-end framework for heavy-traffic web applications
+- [X] A platform for scalable network applications
+- [ ] A system that administrates priviliges and access for applications, systems, and users.
+
+Remember that Node.js is more powerful than any individual use that it can be associated with.
+
+<!-- @end -->
+
+<!-- @multipleChoice -->
+
+What is Node.js?
+
+- [ ] A package manager for JavaScript packages
+- [ ] A front-end framework for heavy-traffic web applications
+- [X] A platform for scalable network applications
+- [ ] A system that administrates priviliges and access for applications, systems, and users.
+
+Remember that Node.js is more powerful than any individual use that it can be associated with.
+
+<!-- @end -->
+
+<!-- @multipleChoice -->
+
+What is Node.js?
+
+- [ ] A package manager for JavaScript packages
+- [ ] A front-end framework for heavy-traffic web applications
+- [X] A platform for scalable network applications
+- [ ] A system that administrates priviliges and access for applications, systems, and users.
+
+Remember that Node.js is more powerful than any individual use that it can be associated with.
+
+<!-- @end -->
+
 
 <!-- @section -->
 
-### What this Outlearn path will cover
+### Concluding remarks and ideas to consider
 
-This path is intended to provide a high level summary of the process for installing and using Red Hat's BRMS (Business Rules Management System) platform, with some particulars that should be helpful for developers and rules authors alike.
+The
 
 <!-- @end -->
