@@ -33,8 +33,6 @@ You'll land at the login page, where you can use the account you created when in
 
 ![4](https://cloud.githubusercontent.com/assets/15032492/10494047/278ff59a-7282-11e5-8916-baaee5874d77.png)
 
-![5](https://cloud.githubusercontent.com/assets/15032492/10494049/2974674c-7282-11e5-9b9e-d044997dfe6d.png)
-
 ![6](https://cloud.githubusercontent.com/assets/15032492/10494052/2d58bdcc-7282-11e5-8686-fed6bc2b050b.png)
 
 ![9](https://cloud.githubusercontent.com/assets/15032492/10494063/3232d6b6-7282-11e5-821d-75478eb562df.png)
@@ -68,5 +66,17 @@ The Project Authoring section is where you'll likely spend the great majority of
 ![](https://cloud.githubusercontent.com/assets/15032492/10494959/3b683e2e-7287-11e5-963f-a9ccd0beab6f.PNG)
 
 The leftmost column (empty in the above image) acts as a file naviagor and lists files in groups, for the selected project. The primary window in the center provides a place to perform editing of any kinds. And the bottom section provides an easily accessible module where errors can be caught and identified.
+
+At the top, the white subnavigation bar below the main navigation menu provides functionality specific to Authoring:
+
+* Explore: Lists recently opened and recently edited files
+* New Item: Allows for a new project, package, rule file, decision table, or other relevant file to be created in the active directory.
+* Tools: Provides a way to launch the project editor (which is opened by default when first navigating to the Project Authoring page). Also links to the Data modeler interface.
+* Repositroy: Opens the categories editor.
+
+All of this is perhaps best understood when in use, so let's open up a DRL file (which contains rules) and see what happens:
+
+![](https://cloud.githubusercontent.com/assets/15032492/10494049/2974674c-7282-11e5-9b9e-d044997dfe6d.png)
+
 
 <!-- @end -->
