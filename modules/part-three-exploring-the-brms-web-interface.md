@@ -31,7 +31,7 @@ You'll land at the login page, where you can use the account you created when in
 
 ![](https://cloud.githubusercontent.com/assets/15032492/10494467/823bdf02-7284-11e5-9da9-9491b71bb3f9.PNG)
 
-![4](https://cloud.githubusercontent.com/assets/15032492/10494047/278ff59a-7282-11e5-8916-baaee5874d77.png)
+![](https://cloud.githubusercontent.com/assets/15032492/10494047/278ff59a-7282-11e5-8916-baaee5874d77.png)
 
 <!-- @section -->
 
@@ -43,7 +43,7 @@ The first page you see upon logging in is the Home page, which is (ironically en
 
 The dearth of useful features - and the plain-ness of the BRMS user interface in general - isn't without reason, however. Red Hat uses a generic template as the base UI for a handful of JBoss middleware and other projects, and a side effect of this is that the template has to support very complex solutions, as well as very narrow ones like BRMS.
 
-The good news is that all the basics are covered: On the top left, the navigation bar displays the Home, Authoring and Deployment menus; at the top right, a simple search bar, "What's New" release notes module, and an account menu round out the options. Furthermore, the layout itself is responsive, and adapts the page layout to screens from smartphones to desktops.
+The good news is that all the basics are covered: On the top left, the navigation bar displays the Home, Authoring and Deployment menus; at the top right, a simple search bar, a contextual help menu, and an account menu round out the options. Furthermore, the layout itself is responsive, and adapts the page layout to screens from smartphones to desktops.
 
 ![](https://cloud.githubusercontent.com/assets/15032492/10494745/2312abb2-7286-11e5-860a-f762746e4444.PNG)
 
@@ -106,5 +106,12 @@ At the top, the white subnavigation bar below the main navigation menu provides 
 
 ### Deployment: The Artifact Repository page
 
+![](https://cloud.githubusercontent.com/assets/15032492/10496352/6a91f3aa-728e-11e5-86dc-cf49d7647dfc.PNG)
+
+The last section of the BRMS interface is the Artifact Repository, which provides an interface for JAR files (Maven dependencies) to be uploaded. The main window lists the existing files, and provides their filepath and last modified date, as well as the option to download a file, or open any file and inspect its contents:
+
+![](https://cloud.githubusercontent.com/assets/15032492/10496447/de07d9f8-728e-11e5-939f-f791de1ae3de.PNG)
+
+Helpfully, even as a Maven dependancy, a JAR can be uploaded even if it does not have any POM information, and BRMS will provide a simple form that can be filled out to compensate for this (the information is injected into the JAR itself.
 
 <!-- @end -->
