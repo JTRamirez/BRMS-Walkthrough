@@ -38,9 +38,9 @@ Let's take a closer look at each of these individual components:
 
 ###At the Repository:
 <br />
-+ __KieModule (kmodule):__ Fundamentally this represents a deployable unit (a JAR or folder) that contains everything below. As previously explained, the descriptor file it is defined by (the kmodule.xml file) allocates resources to knowledge bases, and configures those bases and sessions. The KieModule requires a pom file (standard for Maven) which handles build order. It coexists with the BRMS app, on top of EAP, in a RHEL instance.
-+ __KieContainer (kContainer):__ Contained within the KieModule. Allows for the lookup of named KieBases and KieSessions (see below). This is essentially a reference for KieServices and KieScanner, which are processes that execute on the application side.
-+ __KieBase (kbase):__ The repository for all of an application’s knowledge definitions – rules, processes, functions, and type models. Note that the KieBase itself doesn’t ever contain data, but rather has sessions created from it with which data is inserted into and processed. Since it stores all logic, it is also fairly resource-heavy (hence deferring rule processing to sessions, which are lightweight and ephemeral).
+* KieModule (kmodule): Fundamentally this represents a deployable unit (a JAR or folder) that contains everything below. As previously explained, the descriptor file it is defined by (the kmodule.xml file) allocates resources to knowledge bases, and configures those bases and sessions. The KieModule requires a pom file (standard for Maven) which handles build order. It coexists with the BRMS app, on top of EAP, in a RHEL instance.
+* KieContainer (kContainer): Contained within the KieModule. Allows for the lookup of named KieBases and KieSessions (see below). This is essentially a reference for KieServices and KieScanner, which are processes that execute on the application side.
+* KieBase (kbase): The repository for all of an application’s knowledge definitions – rules, processes, functions, and type models. Note that the KieBase itself doesn’t ever contain data, but rather has sessions created from it with which data is inserted into and processed. Since it stores all logic, it is also fairly resource-heavy (hence deferring rule processing to sessions, which are lightweight and ephemeral).
 
 ###At the Application:
 <br />
