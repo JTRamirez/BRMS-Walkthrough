@@ -1,11 +1,11 @@
 {
-  "olpVersion" : "0.5",
+  "olpVersion" : "0.9",
 
   "paths" : [
     {
-      "name" : "BRMS-walkthrough",
-      "title" : "BRMS Walkthrough",
-      "description" : "An analysis of Red Hat's BRMS solution, from installation to development to rule authoring.",
+      "name" : "Rules Engines: A Walkthrough of Red Hat's BRMS solution",
+      "title" : "Rules Engines: A Walkthrough of Red Hat's BRMS solution",
+      "description" : "An analysis of Red Hat's business rules management solution, from installation to integration to rule authoring.",
       "privacy" : "public",
       "pages" : [
         {"page" : "./pages/introduction.md"},
@@ -16,7 +16,6 @@
         {"module" : "part-five-brms-for-application-developers"},
         {"module" : "part-six-putting-it-all-together"},
         {"module" : "part-seven-advanced-topics"},
-        {"page" : "./pages/conclusion.md"},
         {"page" : "./pages/documentation.md"}
       ]
     }
