@@ -1,11 +1,11 @@
 <!--
 {
 "name": "part-seven-advanced-topics",
-"version" : "0.1",
+"version" : "0.9",
 "title" : "Part VII: Advanced topics",
 "description" : "Items that might be of interest, even if the dive into the weeds a bit.",
-"homepage" : "https://github.com/outlearn-content/outlearn-modules",
-"freshnessDate" : 2015-07-08,
+"homepage" : "https://github.com/JTRamirez/BRMS-Walkthrough",
+"freshnessDate" : 2015-10-14,
 "license" : "CC BY 4.0"
 }
 -->
