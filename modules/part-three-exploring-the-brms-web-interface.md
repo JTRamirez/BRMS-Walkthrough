@@ -4,8 +4,8 @@
 "version" : "0.1",
 "title" : "Part III: Exploring the BRMS web interface",
 "description" : "Navigating the pages of Red Hat's online BRMS platform.",
-"homepage" : "https://github.com/outlearn-content/outlearn-modules",
-"freshnessDate" : 2015-07-08,
+"homepage" : "https://github.com/JTRamirez/BRMS-Walkthrough",
+"freshnessDate" : 2015-10-14,
 "license" : "CC BY 4.0"
 }
 -->
