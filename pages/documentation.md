@@ -1,6 +1,6 @@
 # Documentation
 
-This path was compiled based on the information available on a wide variety of sources, and thankfully most of theser are freely available online. That said, and somewhat frustratingly, online documentation for much of BRMS and its associated contents (Guvnor, Maven, KIE Workbench, etc.) and APIs (KIE, REST) are either dispersed across many channels, or remain hard to come by altogether – so this resource page will hopefully reduce any necessary hunting should you need to learn anything beyond the scope of this path.
+This path was compiled based on the information available on a wide variety of sources, and thankfully most of theser are freely available online. That said, and somewhat frustratingly, online documentation for much of BRMS and its associated contents (Guvnor, Maven, KIE Workbench, etc.) and APIs (KIE, REST) are either dispersed across many channels, or remain hard to come by altogether – so this resource page will hopefully reduce any necessary hunting should you need to learn anything beyond the scope of this path. 
 
 The below links encompass documentation, presentations, videos, and related media that should prove to be helpful in learning more about BRMS, and understanding the process in which it is installed and deployed. This is particularly true for rule authoring (understanding syntax and scope) and app development (APIs, methods, etc.), and I’ve thus organized the links toward these functions.
 
