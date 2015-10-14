@@ -36,11 +36,13 @@ You'll be able to download a disc image of the operating system, which can then 
 
 ![](https://cloud.githubusercontent.com/assets/15032492/10430838/80df799a-70cf-11e5-8d25-867b8c3f32e1.PNG)
 
+(You can always uninstall this and run headless later on, but initial installation and configuration of EAP and BRMS is much easier with a GUI.)
+
 <!-- @section -->
 
 ### Installing Apache's Maven, and Oracle's Java
 
-Before installing Red Hat's software, up-to-date versions of Java and Maven must be installed beforehand.
+Before installing Red Hat's software, up-to-date versions of Java and Maven must be installed beforehand (in that order).
 
 To install Java, navigate to Oracle's download page:
 
@@ -50,7 +52,9 @@ Look for the Linux x64 Installer download, near the bottom of the page, and down
 
 ![](https://cloud.githubusercontent.com/assets/15032492/10430268/2c4c63e6-70cc-11e5-8121-af4b62abecae.PNG)
 
-Oracle provides instructions on their website for installation, but you'll likely need root access, so issue the `su` command and enter the root password to gain the necessary privileges.
+Oracle provides instructions on their website for installation, but you'll likely need root access, so issue the `su` command and enter the root password to gain the necessary privileges. 
+
+Have that password handy, by the way, since you'll invoke root from time to time for installs and for running EAP itself.
 
 For Maven, go to Apache's download page:
 
@@ -66,7 +70,7 @@ Apache provides simple instructions for installing both on their website, and on
 
 ### Installing Red Hat's EAP and BRMS
 
-We can now finally install the actual rules engine and associated software! BRMS does require Red Hat’s Enterprise Application Platform (EAP), so we'll first install that. Once again, navigate to Red Hat's Software and Download Center, and look for "Red Hat JBoss Enterprise Application Platform) in the JBoss Development and Management section of the page (about half-way down. Select that, and, on the download page itself, click the download link for "Red Hat JBoss Enterprise Application Platform Installer":
+We can now finally install the actual rules engine and associated software! BRMS does require Red Hat’s Enterprise Application Platform (EAP), so we'll first install that. Once again, navigate to Red Hat's Software and Download Center, and look for "Red Hat JBoss Enterprise Application Platform" in the JBoss Development and Management section of the page (about half-way down). Select that, and, on the download page itself, click the download link for "Red Hat JBoss Enterprise Application Platform Installer":
 
 ![](https://cloud.githubusercontent.com/assets/15032492/10430709/b3577694-70ce-11e5-8416-caaceaad1cab.PNG)
 
@@ -78,13 +82,17 @@ Since both of these downloads are Java packages, just use the Terminal to execut
 
 `java -jar 'APPLICATION_FILE_NAME.jar'`
 
+For EAP, you'll be presented with a simple interface that checks for compatibility, lets you choose the install directory location, and then installs in place. For BRMS, the interface will have you locate the EAP directory, and will install within.
+
 <!-- @section -->
 
 ### Installing related software and tools
 
-Finally, once all else is in place, importing and Java development of any kind is generally handled by the JBoss BRMS Developer Studio (which is a version of Eclipse with EAP and BRMS-related tools installed), though rules authoring itself is intended to be done via BRMS. Red Hat provides an Eclipse plug-in that integrates some EAP and BRMS development tools into the Java IDE, and packages this into a unified solution as their EAP Development Platform (for RHEL). Much of this is documented in their BRMS 6.1 Administration and Configuration guide (A&C) mentioned earlier, but to download one simply navigates to the same Software and Download Center mentioned earlier.
+Finally, once all else is in place, you'll want to install Red Hat's development tools for integrating BRMS into applications. To that end, Red Hat reccomends that Java development be done with their JBoss BRMS Developer Studio (which itself is just a custom version of Eclipse with EAP and BRMS-focused tools incorperated). Alternatively, plugins for Eclipse that provide the same functionality are available in the Eclipse Marketplace. Meanwhile, rules authoring itself is intended to be done via BRMS. 
 
-When you're ready to launch EAP and BRMS, ensure that you're root (`su`) and `cd` to the directory you've installed EAP in (e.g. 'EAP-6.4.0'). Then, enter
+Much of this is documented in Red Hat's [BRMS 6.1 Administration and Configuration guide (A&C)](https://access.redhat.com/documentation/en-US/Red_Hat_JBoss_BRMS/6.1/html-single/Administration_And_Configuration_Guide/), but to download the JBoss BRMS Developer Studio, one simply navigates to the same Software and Download Center mentioned earlier.
+
+Finally, when you're ready to launch EAP and BRMS, ensure that you're root (`su`) and `cd` to the directory you've installed EAP in (e.g. 'EAP-6.4.0'). Then, enter:
 
 `bin/standalone.sh`
 
