@@ -1,11 +1,11 @@
 <!--
 {
 "name": "part-six-putting-it-all-together",
-"version" : "0.1",
+"version" : "0.9",
 "title" : "Part VI: Putting it all together",
 "description" : "Wrapping up this path with a summary of the most important concepts, and how they interrelate.",
-"homepage" : "https://github.com/outlearn-content/outlearn-modules",
-"freshnessDate" : 2015-07-08,
+"homepage" : "https://github.com/JTRamirez/BRMS-Walkthrough",
+"freshnessDate" : 2015-10-14,
 "license" : "CC BY 4.0"
 }
 -->
