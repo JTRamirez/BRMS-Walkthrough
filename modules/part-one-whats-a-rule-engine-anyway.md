@@ -18,7 +18,7 @@
 * The benefits and challenges of using a Rules Engine
 * What this Outlearn path will cover
 
-<br /><br />
+<br />
 
 # The definition of a Rules Engine
 
@@ -192,7 +192,7 @@ Pop quiz! What's a _rules engine_?
 - [ ] An injection-based diesel combustion engine that hypothetically meets strict EPA emissions standards.
 
 <!-- @end -->
-<br />
+  
 <!-- @multipleChoice -->
 
 Which of the following _is not_ a benefit to using a rules engine?
@@ -203,7 +203,7 @@ Which of the following _is not_ a benefit to using a rules engine?
 - [X] Implementing a rules engine simplifies the technology landscape it is a part of.
 
 <!-- @end -->
-<br />
+  
 <!-- @multipleChoice -->
 
 Which of the following _is_ a potential pitfall to using a rules engine?
