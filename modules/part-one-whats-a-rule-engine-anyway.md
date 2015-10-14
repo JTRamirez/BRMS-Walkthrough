@@ -53,7 +53,7 @@ As simple as the above example may be, however, it isn't hard to consider less s
 
 ```java
 
-int deductionLookup(String[][] claimedDeductions) {
+String[][] deductionLookup(String[][] claimedDeductions) {
 	for(String s: deductionArray[][]) {
 		for (int i = 0; i < deductionArray.length; i++) {
 		  for (int k = 0; k < claimedDeductions.length; k++) {
@@ -161,16 +161,16 @@ _(Note that, for the purposes of this path, the BRE (Business Rules Engine) we'l
 
 ### The benefits and challenges of using a Rules Engine
 
-It may seem unusual at first to effectively outsource intellignece from the application that's using the logic anyway, but abstracting logic from application code provides a variety of benefits:
+It may seem unusual at first to effectively outsource intellignece and logic from the application that's using the logic anyway, but abstracting logic from application code provides a variety of benefits:
 
-* For logic that needs to be changed or updated often, it is usually time-consuming and expensive to perfom such updates when the logic is expressed in application code. A developer has to find the code that contains the logic, and then make changes. Those changes have to be tested for QA purposes. And then the updated application has to be deployed. Rules, comparatively, are easier to update, and faster to deploy - even a non-programmer can concievably use the BRMS interface to update rules in real time, and then deploy them to live applications without interruption, and without the risk of introducting bugs in the application code.
-* Logic expressed in programming languages like Java tend to be difficult to understand, especially for those who don't code frequently. Even a developer can have trouble understanding the context of a function within an application if they didn't write it themselves. Business rules, however, have a more legible syntax that is clearer to experienced programmers and BSA's alike. Furthermore, such rules are much easier to understand outside the context of the application that uses it, reducing the risk of programmatic errors.
+* For logic that needs to be changed or updated often, it is usually time-consuming and expensive to perfom such updates when the logic is expressed in application code. A developer has to find the code that contains the logic, and then make changes. Those changes have to be tested for QA purposes. And then the updated application has to be deployed. Rules, comparatively, are easier to update, and faster to deploy - even a non-programmer can concievably use the BRMS interface to update rules in real time, and rules can be deployed to live applications without interruption, and without the risk of introducting bugs in the application code.
+* Logic expressed in programming languages like Java tend to be difficult to understand, especially for those who aren't programmers. Even a developer can have trouble understanding the context of a logical function within an application if they didn't write it themselves. Business rules, however, have a more legible syntax that is clearer to experienced programmers and BSA's alike. Furthermore, such rules are much easier to understand outside the context of the application that uses it, reducing the risk of programmatic errors.
 * As you might expect, administrating rules, and building similar logic across multiple systems, is much easier when business rules and logic are centralized.
 * When utilized properly, rules engines can sometimes offer performance benefits to applications by processing logic faster than if the app did it alone. This is particularly true of applications that process data through logic very often - BRE's rely on sophistocated algorithms that deduce the most efficient way to process business rules, whereas most applications that encapsulate logic rely on simpler or clearer code at the expense of efficiency.
 
-Of course, rules engines have costs associated with them as well, including:
+Of course, rules engines have burdens associated with them as well, including:
 
-* Additional costs, both direct (purchasing and maintaining the rules engine and associated hardware/platforms) and indirect (the development and training cost to transition logic into the engine, and train employess how to utilize it).
+* Additional costs, both direct (purchasing and maintaining the rules engine and associated hardware/platforms) and indirect (the development and training cost to transition logic into the engine, and train employess on how to utilize it).
 * Increased complexity, both from a technology environment perspective, and an application development perspective.
 * A small risk of slowing down applications, particularly when developers don't leverage the rules engine properly, and/or don't adapt the right mindset when composing rules (_rule creation is very different from application development!_).
 
@@ -180,7 +180,7 @@ Ultimately, however, rules engines can be very beneficial for environments that 
 
 ### What this Outlearn path will cover
 
-This path is intended to provide a high level summary of the process for installing and using Red Hat's BRMS (Business Rules Management System) platform, with some particulars that should be helpful for developers and rules authors alike.
+This path is intended to provide a high level summary of the process for installing and using Red Hat's BRMS (Business Rules Management System) platform, with some particulars that should be helpful for developers and rules authors alike. That said, much of the high-level information reflects how rules engines in general tend to work, and aren't specific to Red Hat's solution(s).
 
 <!-- @multipleChoice -->
 
