@@ -14,12 +14,11 @@ Finally, since BRMS is derivative of a variety of open source projects (and depe
 
 ### Components of Red Hat BRMS
 
-Drools (including Workbench, Expert, Fusion, jBPM & OptaPlanner): `http://www.drools.org/`
-Guvnor: `http://guvnor.jboss.org/`
-JBoss EWP/EAP: `http://www.jboss.org/products/eap/overview/`
+1. Drools (including Workbench, Expert, Fusion, jBPM & OptaPlanner): `http://www.drools.org/`
+2. Guvnor: `http://guvnor.jboss.org/`
+3. JBoss EWP/EAP: `http://www.jboss.org/products/eap/overview/`
 
 ### Projects & Solutions Utilized by BRMS
 
-Java SE/JRE: `http://www.oracle.com/technetwork/java/javase/overview/index.html`
-Maven: `https://maven.apache.org/`
-
+1. Java SE/JRE: `http://www.oracle.com/technetwork/java/javase/overview/index.html`
+2. Maven: `https://maven.apache.org/`
