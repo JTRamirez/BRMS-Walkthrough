@@ -16,18 +16,21 @@
 
 * A high-level summary of everything covered so far
 * A final quiz
-* Concluding remarks
 
 
 <!-- @section -->
 
 ### Summary
 
-Fundamentally, a rules engine is:
+Recall the definition we read at the beginning of this path:
 
-> A system that is *purpose-built to perform logic*, usually in the form of "When [condition], then [action]".
+> A Rules Engine is technological system, used by organizations, that's purpose-built to process logical operations, usually in the form of "when [condition], then [action]".
 
-Rather than encompassing a bunch of application components, rules engines are narrowly focused on the decision-making processes that exist within most apps. Thus, they are meant work alongside applications by centralizing the storage of rules and logic, and then processing data against those rules as needed.
+At the end of the day, rules engines are meant to handle logic and decision making better than application code. There are certainly added complexities and costs associated with implementing a rules engine into an environment, but for the landscapes that change rules often, or desire to do a better job of administrading swaths of logic, rules engines offer specialization, efficiency, and access.
+
+**For rule authors**, the BRMS web interface provides an accessible platform with which to create rules. Furthermore, DRL files and decision tables rely on clear syntax and can even (in the case of decision tables) be created using traditional spreadsheet software. In either case, however, the logic itself is meant to be presented clearly, easily edited, and quickly deployed.
+
+Finally, **for developers**, Red Hat's documentation and API's provide guidance for integrating their rules engine into existing Java apps, and their Development Studio streamlines this process. Various services and implementations (accessed by apps via imports and APIs) work in concert to allow for applications to maintain local rules caches, and translate logic from Java code to rules files.
 
 <!-- @section -->
 
@@ -46,23 +49,23 @@ Which of the following is the best definition for a _rules engine_?
 
 <!-- @multipleChoice -->
 
-Select all of the following that constitute _benefits_ to implementing a rules engine.
+Which of the following _isn't a benefit_ to implementing a rules engine?
 
-- [X] XCentralizing business rules makes such logic easier to administrate and modify.
-- [ ] XThe syntax of business rules is easier to understand and work with, compared to application code.
-- [ ] XUpdating business rules is significantly easier, faster, and more cost-effective than updating application code.
-- [ ] XRules engines can speed up logic processing, especially for applications with many rules.
+- [ ] The syntax of business rules is easier to understand and work with, compared to application code.
+- [X] Rules engines greatly simplify the technology environment they are integrated within.
+- [ ] Updating business rules is significantly easier, faster, and more cost-effective than updating application code.
+- [ ] Rules engines can speed up logic processing, especially for applications with many rules.
 
 <!-- @end -->
 
 <!-- @multipleChoice -->
 
-Select all of the following that constitute _pitfalls_ to implementing a rules engine.
+Which of the following _isn't a pitfall_ to implementing a rules engine?
 
-- [X] Business rules and decision tables are harder for non-programmers to understand.
-- [ ] XRules engines have direct and indirect costs.
-- [ ] XA rules engine introduces some complexity to its environment, and to application development for apps that rely on it.
-- [ ] Rules engines require significant hardware and network upgrades to support the platform, in order to avoid large slowdowns in application processing.
+- [ ] It can take time for developers to train and acclimate to working with rules engines and the API's they rely on.
+- [ ] Rules engines have both direct and indirect costs.
+- [ ] A rules engine introduces some complexity to its environment, and to application development for apps that rely on it.
+- [X] Rules engines require significant hardware and network upgrades to support the platform, in order to avoid large slowdowns in application processing.
 
 <!-- @end -->
 
@@ -74,28 +77,6 @@ Which of the following lists everything that must be installed before installing
 - [ ] RHEL, JBoss EAP, Maven, BRMS, Java
 - [ ] RHEL, Maven, Java, JBoss EAP, BRMS
 - [ ] Java, RHEL, JBoss EAP, Maven, BRMS
-
-<!-- @end -->
-
-<!-- @multipleChoice -->
-
-[RESERVED FOR INTERFACE NAV]
-
-- [ ] X
-- [ ] X
-- [X] Y
-- [ ] X
-
-<!-- @end -->
-
-<!-- @multipleChoice -->
-
-[RESERVED FOR INTERFACE NAV]
-
-- [ ] X
-- [ ] X
-- [X] Y
-- [ ] X
 
 <!-- @end -->
 
@@ -154,25 +135,5 @@ As the rules repository for BRMS is stored externally from all local application
 - [X] A KieScanner service installed in the application fetches rules and creates a rules cache in application memory at runtime, and updates the local cache by checking for updates periodically; a KieServices service lets the application interact with the cache.
 - [ ] A KieScanner service installed in the application fetches rules and creates a rules cache in application at runtime, and updates the local cache whenever KieScanner is restarted; a KieSession 
 - [ ] A KieServices service provides a unified interface whereby a rules cache is generated at runtime and stored in application memory; any and all rules updates or logic processing is handled by it.
-
-<!-- @end -->
-
-<!-- @multipleChoice -->
-
-?
-
-- [ ] import; methods; services
-- [X] A KieScanner service installed in the application fetches rules and creates a rules cache in application memory at runtime, and updates the local cache by checking for updates periodically; a KieServices service lets the application interact with the cache.
-- [ ] A KieScanner service installed in the application fetches rules and creates a rules cache in application at runtime, and updates the local cache whenever KieScanner is restarted; a KieSession 
-- [ ] A KieServices service provides a unified interface whereby a rules cache is generated at runtime and stored in application memory; any and all rules updates or logic processing is handled by it.
-
-<!-- @end -->
-
-
-<!-- @section -->
-
-### Concluding remarks and ideas to consider
-
-The
 
 <!-- @end -->
