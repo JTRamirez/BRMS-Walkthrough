@@ -3,7 +3,7 @@
 
   "paths" : [
     {
-      "name" : "Walking through Red Hat's BRMS solution",
+      "name" : "Red Hat BRMS A Rules Engine Primer",
       "title" : "Rules Engines: A Walkthrough of Red Hat's BRMS solution",
       "description" : "An analysis of Red Hat's business rules management solution, from installation to integration to rule authoring.",
       "privacy" : "public",
