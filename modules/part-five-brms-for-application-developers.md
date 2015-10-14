@@ -16,9 +16,7 @@
 
 * Overview of integrating BRMS with Java applications
 * Migrating existing rules repositories (BRMS 5.x) to BRMS 6.0+
-* Basic sequence of integrating new applications
-* APIs & related documentation
-
+* Basic sequence of integrating new application
 
 <!-- @section -->
 
@@ -60,11 +58,24 @@ At the application level, the services (KieScanner, KieServices, and KieSession)
 
 Red Hat provides backwards compatible APIs on 6.0 for BRMS versions 5.x. However, these are deprecated from 6.1 and beyond - those require reqrites as much of the underlying technology is changed.
 
+In Red Hat's own words, on the aforementioned A&C Guide:
+
+> The BPMS 6 system provides backward compatibility with the rule, event and process interactions
+> from BRMS 5. You should eventually migrate (rewrite) these interactions to the all new revamped core
+> API because this backward compatibility is likely to be deprecated.
+>
+> If you can't migrate your code to use the new API, then you can use the API provided by the purpose
+> built `knowledge-api` jar for backwards compatible code. This API is the public interface for
+> working with BPMS and BRMS and is backwards compatible.
+>
+> If you are instead using the REST API in BRMS 5, note that this has changed as well and there is no
+> mechanism in it for backwards computability.
+
 <!-- @section -->
 
 ### Basics of integrating new applications
 
-Knowing all this, one can construct a (highly simplified!) step-by-step for implementing a rules engine alongside existing applications, starting with Java apps in Eclipse or BRMS Developer Studio:
+Knowing all this, we can a (highly simplified!) sequence for implementing a rules engine alongside existing applications, starting with Java apps in Eclipse or BRMS Developer Studio:
 
 1. In the Java application to be migrated (i.e. have its logic moved to BRMS), import kie and drools libraries in the app (ensuring coverage of any and all logic to be handled by BRMS). For example, this is the “bare minimum” needed in order for an application to utilize very basic rules located in a local repository:
 
@@ -96,11 +107,12 @@ private static KnowledgeBase readKnowledgeBase() throws Exception {
   return kbase;
 }
 ```
+Red Hat's [Development Guide](https://access.redhat.com/documentation/en-US/Red_Hat_JBoss_BRMS/6.0/pdf/Development_Guide/Red_Hat_JBoss_BRMS-6.0-Development_Guide-en-US.pdf) has examples and guidance for these. Refer to the Documentation page for more supporting information.
 
-<!-- @section -->
+3. Turning to BRMS, create a project via the web interface. Red Hat provides a helpful framework for how to organize packages, products, repositories and organizations on the home page of BRMS, but for the sake of particular applications, they tend to live at the project or package level. That said, how this structure is abstracted is mostly up to developers.
 
-### APIs & related documentation
+![](https://cloud.githubusercontent.com/assets/15032492/10487424/df6b85f6-7261-11e5-8fbf-e495bd3cf45f.png)
 
-Tables and links go here.
+4. Create rules and decision tables that utilize the variables presented by the app, again via the BRMS web application interface. Rules are programmatic “When [condition], then [action]”, with their own straightforward syntax. The punctuation is forgiving, and many keywords are available in order to achieve more complex behavior, or set rule precedence). Furthermore, this syntax can even be designed via Domain Specific Languages, or DSLs (which the 6.0 Development Guide documents thoroughly in Section 7.5).
 
 <!-- @end -->
