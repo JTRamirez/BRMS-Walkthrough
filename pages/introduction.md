@@ -4,13 +4,13 @@ This path is intended to do the following:
 
 * Give a high-level summary of the purpose, benefits and drawbacks of rules engines.
 * Explain the fundamentals of installation, integration, and rule authoring with Red Hat's BRMS rules engine solution.
-* Provide vetted documentation and other supporting information that can be used as a resource throughout the above steps.
+* Provide a collection of vetted documentation and other supporting information that can be used as a resource for training and otherwise.
 
-Information will be added or amended as needed in order to fulfill the purpose of providing an informative resource, and as such this should be treated as a living document. If you have any questions or suggestions, feel free to reach out with comments.
+Information will be added or amended as needed in order to fulfill the purpose of providing an up-to-date and informative resource, and as such this should be treated as a living document. If you have any questions or suggestions, feel free to reach out with comments.
 
-Beyond the modules in the path, there is additionally a _Documentation_ page at the end of the path that provides links to a variety of helpful resources, some of which informed the path itself. If you're finding yourself looking for more information, or asking questions mid-module, it is encouraged that you pull up those resources while going through this path.
+In addition to the learning modules in this path, there is also a _Documentation_ page at the end of the path that provides links to a variety of helpful resources, some of which informed the path itself. If you find yourself looking for more information, or notice that you're asking yourself questions anywhere along the path, it is encouraged that you pull up those linked resources and use them to supplement the content presented here.
 
-Finally, since BRMS is derivative of a variety of open source projects (and depends on others), it's worth listing the most prominent of these:
+Finally, since BRMS is derivative of a variety of open source projects, and depends on others, it's worth listing the most prominent of these:
 
 ### Components of Red Hat BRMS
 
@@ -22,3 +22,5 @@ Finally, since BRMS is derivative of a variety of open source projects (and depe
 
 1. Java SE/JRE: `http://www.oracle.com/technetwork/java/javase/overview/index.html`
 2. Maven: `https://maven.apache.org/`
+
+Ready to go? Click continue to begin this path!
