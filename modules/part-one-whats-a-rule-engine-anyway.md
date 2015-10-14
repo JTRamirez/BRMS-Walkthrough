@@ -15,7 +15,7 @@
 # What's covered in this section
 
 * The definition of a Rules Engine
-* The benefits and challenges of a Rules Engine
+* The benefits and challenges of using a Rules Engine
 * What this Outlearn path will cover
 
 <br /><br />
@@ -28,10 +28,10 @@ Fundamentally, a rules engine is:
 
 Rather than encompass a bunch of application components, or provide a discrete function in and of itself, rules engines are narrowly focused on performing and organizing the decision-making processes that usually exist within the code of most applications. Thus, instead of replacing other solutions, they are meant to be augmented by existing ones, through the centralization of rules and logic.
 
-The best way to conceptualize this is to consider how applications are traditionally created. In the vast majority of circumstances, apps are made to be entirely encapsulated, so that any variables or logical decisions that they process are written in the same code that performs all other functionality. So, for example, a Java-powered tax calculator may have the following code (a function call) that determines the marginal tax rate of an individual based on their income:
+The best way to conceptualize this is to consider how applications are traditionally created. In the vast majority of circumstances, apps are made to be entirely encapsulated, so that any variables or logical decisions that they process are written in the same code that performs other functionality. So, for example, a Java-powered tax calculator may have the following code (a function call) that determines the marginal tax rate of an individual based on their income:
 
 ```java
-findIndividualMarginalTaxRate(double income) {
+double findIndividualMarginalTaxRate(double income) {
   if (income > 90750) {
     marginalRate == .28;
     }
@@ -47,42 +47,59 @@ findIndividualMarginalTaxRate(double income) {
   return marginalRate;
 }
 ```
+In this case, chained `if` statements get the job done, but the function as a whole can be considered a group of logical choices made by the program - "when income is above 90750, set the marginal rate to .28; when income is above 37450 and below 90750, set the marginal rate to .25...", and so forth.
 
-As simple as this example is, it isn't hard to consider less straightforward logical constructs, and in particular how complex these become if they are interwoven or co-dependant. Imagine if we also function calls for determining which tax rates apply to various individuals, and had to roll these up into a function that would select the correct tax schedule to use in calculation:
+As simple as the above example may be, however, it isn't hard to consider less straightforward logical constructs, and in particular how complex these become if they are interwoven or co-dependant. Imagine if we also had functions for determining which tax rates apply to various individuals, and then had to roll those up into a unified function that would select the correct tax schedule to use in subsequent calculation. Some of those might include:
 
 ```java
-marrigeStatus(bool isMarried) {
-  if (married == 1) {
-    return 1;
-    }
-  return 0;
+
+int deductionLookup(String[][] claimedDeductions) {
+	for(String s: deductionArray[][]) {
+		for (int i = 0; i < deductionArray.length; i++) {
+		  for (int k = 0; k < claimedDeductions.length; k++) {
+		    if (deductionArray[i][0] = claimedDeductions[k][0]) {
+		      claimedDeductions[k][1] = Integer.parseInt(deductionArray[i][1]);
+		    }
+		  }
+		}
+		return claimedDeductions[][];
+	}
+  throw new IncorrectDataException();
 }
 
-jointRetun(bool relationshipStatus, bool isJoint) {
-  if (marriageStatus(relationshipStatus) == 1) {
-    if (bool isJoint == 1) {
-     return 1; 
+boolean marrigeStatus(boolean isMarried) {
+  if (married == true) {
+    return true;
+    }
+  return false;
+}
+
+boolean jointRetun(boolean relationshipStatus, boolean isJoint) {
+  if (marriageStatus(relationshipStatus) == true) {
+    if (bool isJoint == true) {
+     return true; 
     }
   }
   return 0;
 }
 
-headOfHousehold(bool isHeadOfHousehold) {
-  if (isHeadOfHousehold == 1) {
-    return 1;
+boolean headOfHousehold(bool isHeadOfHousehold) {
+  if (isHeadOfHousehold == true) {
+    return true;
   }
-  return 0;
+  return false;
 }
 ```
 
-The resultant wrapped-up function (utilizing the included class to return necessary values) might look like this:
+Further, the resultant unified function (utilizing a class to return both necessary values) might look like this:
 
 ```java
 final class taxProfile {
   private final double marginalRate;
   private final int standardDeduction;
+  private String[][] itemizedDeductions;
   
-  public myTaxProfile(double marginalRate, int standardDeduction) {
+  public myTaxProfile(double marginalRate, int standardDeduction, int[] claimedDeductions) {
     this.marginalRate = marginalRate;
     this.standardDeduction = standardDeduction;
   }
@@ -94,45 +111,55 @@ final class taxProfile {
   public int getStandardDeduction() {
     return standardDeduction;
   }
+  
+  public String[][] claimedDeductions() {
+    return claimedDeductions[][];
+  }
+  
 }
 
 ...
 
-selectTaxRateSchedule(bool isMarried, bool isJoint, bool isHeadOfHouse, bool isTrustOrEstate, double income) {
+taxProfile selectTaxRateSchedule(boolean isMarried, boolean isJoint, boolean isHeadOfHouse, boolean isTrustOrEstate, double income) {
   if (marrigeStatus(isMarried) == 1) {
     if jointReturn(isJoint) == 1) {
-      return new myTaxProfile(findJointMarginalTaxRate(income), 12600);
+      deductionLookup(claimedDeductions());
+      return new myTaxProfile(findJointMarginalTaxRate(income), 12600, claimedDeductions[][]);
     }
     else {
-      return new myTaxProfile(findIndividualMarriedMarginalTaxRate(income), 6300);
+      deductionLookup(claimedDeductions());
+      return new myTaxProfile(findIndividualMarriedMarginalTaxRate(income), 6300, claimedDeductions[][]);
     }
   }
   else if (headOfHousehold(isHeadOfHouse) == 1) {
-    return new myTaxProfile(findHeadOfHouseholdMarginalTaxRate(income), 9250);
+    deductionLookup(claimedDeductions());
+    return new myTaxProfile(findHeadOfHouseholdMarginalTaxRate(income), 9250, claimedDeductions[][]);
   }
   else if (trustAndEstate(isTrustOrEstate) == 1) {
-    return new myTaxProfile(findTrustAndEstateMarginalTaxRate(income), 0);
+    deductionLookup(claimedDeductions());
+    return new myTaxProfile(findTrustAndEstateMarginalTaxRate(income), 0, claimedDeductions[][]);
   }
   else {
-    return new myTaxProfile(findIndividualMarginalTaxRate(income), 6300);
+    deductionLookup(claimedDeductions());
+    return new myTaxProfile(findIndividualMarginalTaxRate(income), 6300, claimedDeductions[][]);
   }
   throw new IncorrectDataException();
 }
 ```
 
-And this is all just to find the right schedule! We haven't even begun to consider many deductions, or all of the other rules and conditions that apply before we can perform calculation. And this is with fairly repetitive logic that's using very obvious names for variables and functions.
+Already, we can begin to see how the layering of simple logic - even repetitive logic - can lead to some very dense and not-so-intuitive code that has to process it all. And, all of this code is made simply to find the right schedule and deductions - there is no actual calculation taking place, since by the end of the `selectTaxRateSchedule()` function we've merely passed a class that contains some of the information needed to calculate the user's tax burden. Furthermore, in isolation it is all but impossible to understand what `selectTaxRateSchedule()` is even doing - though obvious names for functions and variables are used, some values aren't stored (and thus aren't labeled), and the purpose of most of the contained functions remains obscure until they are discovered and inspected.
 
-Hopefully, this helps to illustrate how combining simple rules and churning thousands of transactions through them can quickly be burdensome, and prone to bugs if a developer hasn't thought through the myriad of possible outcomes from these logical rules at runtime. And, even if a developer creates perfectly bug-free code for this logic, they still have to consider if the rules are written in such a way that, in runtime, they don't utilize more resources than absolutely necessary to find the desired results. In the above example, does it make sense to deduce individual tax filers last, instead of heads of household? Is it prudent to check marital status as a precursor to checking whether or not someone is filing jointly? How would we know?
+Hopefully, this helps to illustrate how combining simple rules and churning through them many times can quickly become burdensome for coders and systems alike, making it all prone to bugs if a developer hasn't thought through the myriad of possible outcomes these logical rules introduce at runtime. Even if a developer creates perfectly bug-free code for this logic, in fact, they still have to consider if the rules are written in such a way that, in runtime, they don't utilize more resources than absolutely necessary to find the desired results. In the above code, for example, does it make sense to deduce individual tax filers last, instead of heads of household? Is it prudent to check marital status as a precursor to checking whether or not someone is filing jointly? Is there a reliable means of checking itemized deductions before determining the filing status of the user, that saves on resources at runtime? How would we know?
 
-There are other challenges as well. What if we need to change some of these tax rates? What if we want to modify what ranges are covered by what rates? How about adding new tax brackets entirely? In the above example, since all of this logic lives in the application as Java code, we have to have a developer look through the source, find the code, and make changes. We then have to re-test and re-deploy the application. All of this is incredibly time consuming and expensive, even though the change itself is fundamentally quite simple in principle and small in scope.
+There are other challenges as well. What if we need to change some of these tax rates? What if we want to modify what ranges are covered by what rates? How about adding new tax brackets entirely? New itemized deductions? In the above example, since all of this logic lives in the application as variables in Java code, we have to have a developer look through the source, find the code, and make changes. We then have to re-test and re-deploy the application. All of this is incredibly time consuming and expensive, even though the change itself is fundamentally quite simple in principle and small in scope.
 
-All of this, and more, comprise the "problem" that rules engines look to solve.
+Well, as you might have figured out by now, all of this (and more) comprise the "problems" that rules engines look to solve.
 
 _(Note that, for the purposes of this path, the BRE (Business Rules Engine) we'll be focusing on is Red Hat's BRMS, which is built upon JBoss Drools, Guvnor, and other open source projects. That said, the concepts behind any rules engine are generally the same.)_
 
 <!-- @section -->
 
-### The benefits and challenges of a Rules Engine
+### The benefits and challenges of using a Rules Engine
 
 It may seem unusual at first to effectively outsource intellignece from the application that's using the logic anyway, but abstracting logic from application code provides a variety of benefits:
 
