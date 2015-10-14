@@ -24,11 +24,31 @@
 
 ### Overview of integrating BRMS with Java applications
 
-BRMS relies on APIs provided by its individual components - Drools, KIE Workbench, and so forth - to integrate with Java applications. However, it's important to understand how this integration of a remote repository looks from a systems, applications and services level:
+BRMS relies on APIs provided by its individual components - Drools, KIE Workbench, and so forth - to integrate with Java applications. However, it's important to understand how this integration of a remote repository looks at a higher level, encompassing systems, applications and services:
 
 ![](https://cloud.githubusercontent.com/assets/15032492/10437076/baedb6b4-70f8-11e5-8f9d-96945a79c536.jpg)
 
-The repository itself exists as a Maven build that contains the DRLs, Tables and associated files that make up all business rules and logic. The BRMS/EAP instance running atop RHEL edits these contents via the KIE Workbench web application, and that information is stored as a unified file called a KieBase. 
+The repository itself exists as a Maven build that contains a POM file (standard for all Maven builds), a kmodule which acts as a deployable unit that contains all the BRMS repository's content for all applications; KieBase(s) that contain rules files for particular applications; and the various DRLs, Tables and associated files that constitute all business rules and logic. 
+
+BRMS/EAP edits these contents via the KIE Workbench web application, and both of these (the instance and the repo) usually co-exist running atop RHEL.
+
+For each application, a service is implemented that does the work of fetching business rules and logic at runtime, and this content is "stored" in working application memory. The same service also polls the kmodule in the remote repositiory at regulated intervals, downloading and refreshing the local rules cache if any changes are detected. Finally, as logic needs to be processed, the application sends inputs to a seperate service, which processes the data against the rules, and feeds the results back into the application.
+
+Let's take a closer look at each of these individual components:
+
+#### At the Repository:
+
+•	*KieModule (kmodule):* Fundamentally this represents a deployable unit (a JAR or folder) that contains everything below. As previously explained, the descriptor file it is defined by (the kmodule.xml file) allocates resources to knowledge bases, and configures those bases and sessions. The KieModule requires a pom file (standard for Maven) which handles build order. It coexists with the BRMS app, on top of EAP, in a RHEL instance.
+•	*KieContainer (kContainer):* Contained within the KieModule. Allows for the lookup of named KieBases and KieSessions (see below). This is essentially a reference for KieServices and KieScanner, which are processes that execute on the application side.
+•	*KieBase (kbase):* The repository for all of an application’s knowledge definitions – rules, processes, functions, and type models. Note that the KieBase itself doesn’t ever contain data, but rather has sessions created from it with which data is inserted into and processed. Since it stores all logic, it is also fairly resource-heavy (hence deferring rule processing to sessions, which are lightweight and ephemeral).
+
+####At the Application:
+
+•	*KieServices (kservice):* The interface with which an application sends data to a KieSession (which lives on the repository side), and retrieves results. Oversimplifying a bit, this is essentially a group of imports, and some function calls, that allow for the application to interact. This is where applications (primarily) interact with the repository!
+•	*KieScanner (kscanner):* A service that continuously monitors a Maven repository (remote or local), in order to detect if a new KieModule has been installed (so, when any changes have been committed to the repo). The polling interval can be declared by the developer in-application, and/or changes can be checked for on demand. Whenever a change is detected, the updated module is automatically downloaded, and an incremental build is triggered. This ensures that all new KieSessions use the updated rules (though this likely does not force live sessions to refresh – that would have to be done manually or programmatically).
+•	*KieSession (ksession):* The process that receives and executes on runtime data in working memory. A KieSession is created when KieServices fetches logic from KieBase (on the repository side) and creates a local rules repository in application working memory – and this local repo is the logic that the application actually works with during execution.  Compared to KieBase, KieSessions are designed to be ephemeral (started and stopped at will) and much less resource intensive, and consequently rule processing is performed through them. This is where the “magic” happens and rules/logic are utilized by applications.
+
+
 
 The applications that use the rules only access them indirectly via the KieScanner service, which runs as a part of each application that leverages rules. When the application is first run, KieScanner pulls the pertinent rules stored in the KieBase and generates a local KieSession rules cache that sits in working application memory, ready to be used by the application's KieServices service. Whenever logic needs to be processed, KieServices becomes live, and pushes the necessary data to the KieSession, and the rules are fired accordingly. Any output is sent back to the application, where it can be used. As it is meant to be ephemeral, KieServices is then ended if and when it no longer has queued data.
 
