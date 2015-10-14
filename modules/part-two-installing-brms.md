@@ -1,11 +1,11 @@
 <!--
 {
 "name": "part-two-installing-brms",
-"version" : "0.1",
+"version" : "0.9",
 "title" : "Part II: Installing BRMS",
 "description" : "How to install Red Hat's BRMS solution.",
-"homepage" : "https://github.com/outlearn-content/outlearn-modules",
-"freshnessDate" : 2015-07-08,
+"homepage" : "https://github.com/JTRamirez/BRMS-Walkthrough",
+"freshnessDate" : 2015-10-14,
 "license" : "CC BY 4.0"
 }
 -->
