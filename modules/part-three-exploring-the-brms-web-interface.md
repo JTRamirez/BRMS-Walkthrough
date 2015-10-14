@@ -31,10 +31,6 @@ You'll land at the login page, where you can use the account you created when in
 
 ![](https://cloud.githubusercontent.com/assets/15032492/10494467/823bdf02-7284-11e5-9da9-9491b71bb3f9.PNG)
 
-
-
-![3](https://cloud.githubusercontent.com/assets/15032492/10494044/25192dea-7282-11e5-953a-dd9f3528e612.png)
-
 ![4](https://cloud.githubusercontent.com/assets/15032492/10494047/278ff59a-7282-11e5-8916-baaee5874d77.png)
 
 ![5](https://cloud.githubusercontent.com/assets/15032492/10494049/2974674c-7282-11e5-9b9e-d044997dfe6d.png)
@@ -63,6 +59,14 @@ The good news is that all the basics are covered: On the top left, the navigatio
 
 ### Authoring: The Project Authoring & Administration pages
 
-This path is intended to provide a high level summary of the process for installing and using Red Hat's BRMS (Business Rules Management System) platform, with some particulars that should be helpful for developers and rules authors alike. That said, much of the high-level information reflects how rules engines in general tend to work, and aren't specific to Red Hat's solution(s).
+The "Authoring" menu in the top navigation has two options: Project Authoring, and Administration
+
+![](https://cloud.githubusercontent.com/assets/15032492/10494044/25192dea-7282-11e5-953a-dd9f3528e612.png)
+
+The Project Authoring section is where you'll likely spend the great majority of your time, as it's the page where rules, decision tables and the like can be edited. Beyond that, however, Project Authoring also lets you edit the settings for projects, and group/artifact/version IDs for tracking purposes.
+
+![](https://cloud.githubusercontent.com/assets/15032492/10494959/3b683e2e-7287-11e5-963f-a9ccd0beab6f.PNG)
+
+The leftmost column (empty in the above image) acts as a file naviagor and lists files in groups, for the selected project. The primary window in the center provides a place to perform editing of any kinds. And the bottom section provides an easily accessible module where errors can be caught and identified.
 
 <!-- @end -->
