@@ -1,11 +1,11 @@
 <!--
 {
 "name": "part-one-whats-a-rule-engine-anyway",
-"version" : "0.1",
+"version" : "0.9",
 "title" : "Part I: What's a Rules Engine, anyway?",
 "description" : "A high-level summary of the function and purpose of a rules engine.",
-"homepage" : "https://github.com/outlearn-content/outlearn-modules",
-"freshnessDate" : 2015-07-08,
+"homepage" : "https://github.com/JTRamirez/BRMS-Walkthrough",
+"freshnessDate" : 2015-10-14,
 "license" : "CC BY 4.0"
 }
 -->
