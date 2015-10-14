@@ -1,11 +1,11 @@
 <!--
 {
 "name": "part-four-rule-authoring-101",
-"version" : "0.1",
+"version" : "0.9",
 "title" : "Part IV: Rule authoring 101",
 "description" : "An introduction to creating business rules, decision tables, and related logical constructs.",
-"homepage" : "https://github.com/outlearn-content/outlearn-modules",
-"freshnessDate" : 2015-07-08,
+"homepage" : "https://github.com/JTRamirez/BRMS-Walkthrough",
+"freshnessDate" : 2015-10-14,
 "license" : "CC BY 4.0"
 }
 -->
