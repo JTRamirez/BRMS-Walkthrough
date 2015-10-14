@@ -1,11 +1,11 @@
 <!--
 {
 "name": "part-five-brms-for-application-developers",
-"version" : "0.1",
+"version" : "0.9",
 "title" : "Part V: BRMS for application developers",
 "description" : "A summary of Red Hat's APIs, and explainers for how an application can integrate with BRMS.",
-"homepage" : "https://github.com/outlearn-content/outlearn-modules",
-"freshnessDate" : 2015-07-08,
+"homepage" : "https://github.com/JTRamirez/BRMS-Walkthrough",
+"freshnessDate" : 2015-10-14,
 "license" : "CC BY 4.0"
 }
 -->
