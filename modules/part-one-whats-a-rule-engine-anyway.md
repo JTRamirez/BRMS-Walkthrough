@@ -103,19 +103,15 @@ final class taxProfile {
     this.marginalRate = marginalRate;
     this.standardDeduction = standardDeduction;
   }
-
   public double getMarginalRate() {
     return marginalRate;
   }
-
   public int getStandardDeduction() {
     return standardDeduction;
   }
-  
   public String[][] claimedDeductions() {
     return claimedDeductions[][];
   }
-  
 }
 
 ...
@@ -149,7 +145,7 @@ taxProfile selectTaxRateSchedule(boolean isMarried, boolean isJoint, boolean isH
 
 Already, we can begin to see how the layering of simple logic - even repetitive logic - can lead to some very dense and not-so-intuitive code that has to process it all. And, all of this code is made simply to find the right schedule and deductions - there's no actual calculation taking place, since by the end of the `selectTaxRateSchedule()` function we've merely passed a class that contains (some of) the information needed to calculate the user's tax burden. Furthermore, in isolation, it is all but impossible to understand what `selectTaxRateSchedule()` is even doing - though obvious names for functions and variables are used, some values aren't stored (and thus aren't labeled), and the purpose of most of the contained functions remains obscure until they are discovered and inspected. A programmer who hasn't seen this program would need time to unwind every function and learn about what's happening, and how, before they could make changes.
 
-Lastly, essentially all of these logical decisions are subject to change over time. Tax brackets are adjusted, tax rates can be changed by legislatures, standard deductions can be altered, itemized deductions can be created or eliminated, filing statuses could be invented... To keep this calculator up to date means constantly revisiting the application, rewriting functions, updating stored values, and then going through the standard testing/QA/deployment processes, regardless of the scope of the change. Quite the headache!
+Lastly, essentially all of these logical decisions are subject to change over time. Tax brackets are adjusted, tax rates can be changed by legislation, standard deductions can be altered, itemized deductions can be created or eliminated, filing statuses could be invented... To keep this calculator up to date means constantly revisiting the application, rewriting functions, updating stored values, and then going through the standard testing/QA/deployment processes, regardless of the scope of the change. Quite the headache, particularly for something that's ostensibly quite simple.
 
 ---
 
@@ -161,7 +157,7 @@ There are other challenges as well. What if we ultimately do need to change some
 
 ---
 
-Well, as you might have figured out by now, all of this (and more) comprise the "problems" that rules engines look to solve, by pulling this logic out of applications, and providing a means to create and edit it with an ideal syntax and in a more sensible way.
+Well, as you might have figured out by now, all of this (and more) comprise the "problems" that rules engines look to solve, by pulling this logic out of applications, and providing a means to create and edit it with an ideal syntax and in a more sensible way. Rather than have the above application code own everything, for example, the app can fetch necessary data, rely on the rules engine to deduce the needed variables, receive the results, and then perform any necessary calculations (such as the final tax bill. In this way, the functionality is the same, but we are able to avoid a lot of the pitfalls associated with having the application determine the correct tax bracket, deductions, and so forth. We also provide a much better way to edit all of those rules as they change over time.
 
 _(Note that, for the purposes of this path, the BRE (Business Rules Engine) we'll be focusing on is Red Hat's BRMS, which is built upon JBoss Drools, Guvnor, and other open source projects. That said, the concepts behind any rules engine are generally the same.)_
 
