@@ -84,7 +84,7 @@ boolean jointRetun(boolean relationshipStatus, boolean isJoint) {
 }
 
 boolean headOfHousehold(bool isHeadOfHousehold) {
-  if (isHeadOfHousehold == true) {
+  if (isHeadOfHousehold == true && jointReturn(relationshipStatus, isJoint) == false) {
     return true;
   }
   return false;
