@@ -91,7 +91,7 @@ boolean headOfHousehold(bool isHeadOfHousehold) {
 }
 ```
 
-Further, the resultant unified function (utilizing a class to return both necessary values) might look like this:
+Further, the resultant unified function (utilizing a class to return all necessary values) might look like this:
 
 ```java
 final class taxProfile {
