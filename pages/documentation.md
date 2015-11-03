@@ -1,6 +1,6 @@
 # Documentation
 
-This path was compiled based on the information available on a wide variety of sources, and thankfully most of theser are freely available online. That said, and somewhat frustratingly, online documentation for much of BRMS and its associated contents (Guvnor, Maven, KIE Workbench, etc.) and APIs (KIE, REST) are either dispersed across many channels, or remain hard to come by altogether – so this resource page will hopefully reduce any necessary hunting should you need to learn anything beyond the scope of this path. 
+This path was compiled based on the information available on a wide variety of sources, and thankfully most of these are freely available online. That said, and somewhat frustratingly, online documentation for much of BRMS and its associated contents (Guvnor, Maven, KIE Workbench, etc.) and APIs (KIE, REST) are either dispersed across many channels, or remain hard to come by altogether – so this resource page will hopefully reduce any necessary hunting should you need to learn anything beyond the scope of this path. 
 
 The below links encompass documentation, presentations, videos, and related media that should prove to be helpful in learning more about BRMS, and understanding the process in which it is installed and deployed. This is particularly true for rule authoring (understanding syntax and scope) and app development (APIs, methods, etc.), and I’ve thus organized the links toward these functions.
 
@@ -46,7 +46,7 @@ Parts [Two](http://www.jboss.org/video/vimeo/65224122/) & [Three](http://www.jbo
 ---
 ### Demos:
 
-Red Hat’s [completed Cool Store Demo](https://github.com/jbossdemocentral/brms-coolstore-demo/tree/v2.0) is available as a git repo, with instructions for installation. Ensure that Java and Maven are installed beforehand, ahowever, nd include the Red Hat software when installing as instructed by the included documentation.
+Red Hat’s [completed Cool Store Demo](https://github.com/jbossdemocentral/brms-coolstore-demo/tree/v2.0) is available as a git repo, with instructions for installation. Ensure that Java and Maven are installed beforehand, however, and include the Red Hat software when installing as instructed by the included documentation.
 
 [The HTML/hosted version of Red Hat’s JBoss BRMS 6.0 Development Guide](https://access.redhat.com/documentation/en-US/Red_Hat_JBoss_BRMS/6.0/html-single/Development_Guide/) is a particularly helpful resource that (for some reason) deviates from the downloadable PDF version noticeably, as it contains more content, and additional sections. I highly suggest reading through it (with a focus on Sections 2-3 for those unfamiliar with Rules Engines; Sections 4-5 for key development information; and Sections 6 and 8 for rule authoring).
 
